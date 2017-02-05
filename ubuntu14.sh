@@ -6,7 +6,7 @@ clear
 echo "#### Installing Sudo ####"
 apt-get install sudo -y
 echo "#### Adding Required Repositories ####"
-sudo add-apt-repository ppa:silknetwork/silknetwor
+sudo add-apt-repository ppa:silknetwork/silknetwork
 clear
 echo "#### Updating Ubuntu/Debian ####"
 sudo apt-get update -y
