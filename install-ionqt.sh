@@ -16,15 +16,15 @@ sudo apt-get install libminiupnpc-dev --with-miniupnpc and --enable-upnp-default
 clear
 echo "####Cloning Repo####"
 sudo git clone https://github.com/Ion-Network/Ion-Core
-clear
+#clear
 echo "####Changing To The Ion-Core Directory####"
 cd Ion-Core/
-clear
+#clear
 echo "####Making####"
 sudo make
-clear
+#clear
 echo "####Installing####"
 sudo install
-clear
+#clear
 echo "####Starting Ion-QT Wallet####"
 sudo ./ionx-qt
