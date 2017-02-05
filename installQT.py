@@ -15,7 +15,7 @@ if name == "Xenial Xerus" or "Yakkety Yak":
         subprocess.call("./ubuntu16.sh", shell=True)
 
 elif name == "Trusty Tahr":
-        urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu16.sh", "ubuntu14.sh")
+        urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu14.sh", "ubuntu14.sh")
         os.chmod('ubuntu14.sh', 0755)
         subprocess.call("./ubuntu14.sh", shell=True)
 
