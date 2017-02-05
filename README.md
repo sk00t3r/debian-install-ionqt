@@ -1,7 +1,7 @@
 # debian-install-ionqt
-Install Ion-QT Wallet on Debian
+Install Ion-QT Wallet
 
-Script to run, ideally just after setting up a new server or desktop, to automatically setup ion-qt.
+Script to run, ideally just after setting up a new server or desktop, to automatically setup ion-qt, execute the below in terminal:
 
 sudo apt-get install git -y
 
