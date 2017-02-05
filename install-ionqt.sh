@@ -15,10 +15,10 @@ sudo apt-get install autoconf autogen automake autotools-dev bsdmainutils build-
 sudo apt-get install libminiupnpc-dev --with-miniupnpc and --enable-upnp-default -y 
 clear
 echo "####Cloning Repo####"
-git clone https://github.com/Ion-Network/Ion-Core
+git clone https://github.com/Ion-Network/Ion-Core ion
 clear
 echo "####Changing To The Ion-Core Directory####"
-cd Ion-Core/
+cd ion
 clear
 echo "####Making####"
 sudo qmake
