@@ -7,7 +7,7 @@ cd /opt
 
 sudo apt-get install git -y
 
-sudo wget https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/install-ionqt.sh
+sudo wget https://raw.githubusercontent.com/Bige086/debian-install-ionqt/master/install-ionqt.sh
 
 sudo chmod 755 install-ionqt.sh
 
