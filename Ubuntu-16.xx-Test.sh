@@ -1,7 +1,5 @@
 #!/bin/bash
 
-if version = 16.04 or 16.10 then
-
 echo "####Changing to home directory####"
 cd ~
 clear
@@ -29,8 +27,3 @@ sudo make
 clear
 echo "####Starting Ion-QT Wallet####"
 sudo ./ionx-qt
-
-if version = 15.04 or 15.10 then 
-
-
-if version = 14.04 or 14.10 then
