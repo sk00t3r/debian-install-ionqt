@@ -5,10 +5,10 @@ Script to run, ideally just after setting up a new server or desktop, to automat
 
 cd /opt
 
-apt-get install git -y
+sudo apt-get install git -y
 
-wget https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/install-ionqt.sh
+sudo wget https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/install-ionqt.sh
 
-chmod 755 install-ionqt.sh
+sudo chmod 755 install-ionqt.sh
 
-./install-ionqt.sh
+sudo ./install-ionqt.sh
