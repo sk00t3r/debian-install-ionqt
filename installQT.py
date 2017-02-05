@@ -1,12 +1,17 @@
 #!/usr/bin/python
 
 import platform
+import subprocess
 
 distro = platform.linux_distribution()[0]
 version = platform.linux_distribution()[1]
 name =  platform.linux_distribution()[2]
 
-if version == 16.04
-  subprocess.call("Ubuntu-16.xx-Test.sh")
- else 
-  print "OS not Supported Yet."
+if name == "Xenial Xerus" or "Yakkety Yak":
+        subprocess.call("./ubuntu16.sh", shell=True)
+
+elif name == "Trusty Tahr":
+        subprocess.call("./ubuntu14.sh", shell=True)
+
+else:
+        print("Sorry version not yet supported.")
