@@ -10,6 +10,7 @@ sudo apt-get install git -y
 sudo wget https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/installQT.py
 
 sudo chmod 755 installQT.py
+
 sudo chmod 755 u (then tab to complete the correct version based on your Ubuntu install)
 
 sudo ./installQT.py
