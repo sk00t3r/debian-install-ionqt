@@ -10,12 +10,12 @@ version = platform.linux_distribution()[1]
 name =  platform.linux_distribution()[2]
 
 if name == "Xenial Xerus" or "Yakkety Yak":
-        urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu16.sh")
+        urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu16.sh", "ubuntu16.sh")
         os.chmod('ubuntu16.sh', 0755)        
         subprocess.call("./ubuntu16.sh", shell=True)
 
 elif name == "Trusty Tahr":
-        urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu16.sh")
+        urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu16.sh", "ubuntu14.sh")
         os.chmod('ubuntu14.sh', 0755)
         subprocess.call("./ubuntu14.sh", shell=True)
 
