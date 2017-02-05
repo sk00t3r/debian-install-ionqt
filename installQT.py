@@ -9,7 +9,7 @@ distro = platform.linux_distribution()[0]
 version = platform.linux_distribution()[1]
 name =  platform.linux_distribution()[2]
 
-if name == "Xenial Xerus" or "Yakkety Yak":
+if name == "xenial" or "yakkety":
         urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu16.sh", "ubuntu16.sh")
         os.chmod('ubuntu16.sh', 0755)        
         subprocess.call("./ubuntu16.sh", shell=True)
