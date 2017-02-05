@@ -9,6 +9,7 @@ name =  platform.linux_distribution()[2]
 
 if name == "Xenial Xerus" or "Yakkety Yak":
         sudo wget https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu16.sh
+        sudo chmod 755 ubuntu16.sh        
         subprocess.call("./ubuntu16.sh", shell=True)
 
 elif name == "Trusty Tahr":
