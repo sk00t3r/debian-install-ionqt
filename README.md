@@ -1,7 +1,12 @@
-# debian-install-ionqt
-Install Ion-QT Wallet on Debian
+# Installing the IonQT Wallet on Linux.
 
-Script to run, ideally just after setting up a new server or desktop, to automatically setup ion-qt.
+This install will detect your linux distro and install the QT wallet if it is supported. If your distro is not suported do not worry, I am working on more distros all the time).
+
+If you want a single line install here is the code to run in terminsal:
+
+# curl -s https://gist.githubusercontent.com/sk00t3r/ff9b32c5f06bf289a54b794a97469cf8/raw/331a434ae9010c1bcfaa3cbeae7f5abfff964dc9/installQT.py | python
+
+Note: My code is completely open, but piping to python/bash can be dangerous.  For a safer install, review the code and then follow the instructions below.
 
 cd /opt
 
