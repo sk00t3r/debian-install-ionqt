@@ -1,6 +1,6 @@
 # Installing the IonQT Wallet on Linux.
 
-This install will detect your linux distro and install the QT wallet if it is supported. If your distro is not suported do not worry, I am working on more distros all the time).
+This install will detect your linux distro and install the QT wallet if it is supported. If your distro is not suported do not worry, I am working on more distros all the time.
 
 # Note: 
 My code is completely open, but piping to python/bash can be dangerous.  For a safer install, review the code and then follow the instructions below.
