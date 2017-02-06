@@ -12,7 +12,42 @@ sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 clear
 echo "#### Installing Dependencies ####"
-sudo apt-get install autoconf autogen automake autotools-dev bsdmainutils build-essential git libboost-all-dev libboost-dev libboost-filesystem-dev libboost-program-options-dev libboost-system-dev libboost-thread-dev libcrypto++-dev libdb++-dev libdb5.3++-dev libdb5.3-dev libevent-dev libgmp3-dev libgmp-dev libprotobuf-dev libqrencode-dev libqrencode-devinstall libqt5core5a libqt5dbus5 libqt5gui5 libssl-dev libtool make pkg-config protobuf-compiler qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev qttools5-dev-tools -y
+sudo apt-get install autoconf -y 
+sudo apt-get install autogen -y
+sudo apt-get install automake -y
+sudo apt-get install autotools-dev -y
+sudo apt-get install bsdmainutils -y
+sudo apt-get install build-essential -y 
+sudo apt-get install git -y
+sudo apt-get install libboost-all-dev -y 
+sudo apt-get install libboost-dev -y
+sudo apt-get install libboost-filesystem-dev -y
+sudo apt-get install libboost-program-options-dev -y 
+sudo apt-get install libboost-system-dev -y
+sudo apt-get install libboost-thread-dev -y 
+sudo apt-get install libcrypto++-dev -y 
+sudo apt-get install libdb++-dev -y
+sudo apt-get install libdb5.3++-dev -y
+sudo apt-get install libdb5.3-dev -y
+sudo apt-get install libevent-dev-y
+sudo apt-get install libgmp3-dev -y
+sudo apt-get install libgmp-dev -y 
+sudo apt-get install libprotobuf-dev -y
+sudo apt-get install libqrencode-dev -y
+sudo apt-get install libqrencode-devinstall -y
+sudo apt-get install libqt5core5a-y
+sudo apt-get install libqt5dbus5 -y
+sudo apt-get install libqt5gui5 -y 
+sudo apt-get install libssl-dev -y 
+sudo apt-get install libtool -y 
+sudo apt-get install make -y
+sudo apt-get install pkg-config -y
+sudo apt-get install protobuf-compiler -y 
+sudo apt-get install qt5-default -y
+sudo apt-get install qt5-qmake -y
+sudo apt-get install qtbase5-dev-tools -y 
+sudo apt-get install qttools5-dev -y
+sudo apt-get install qttools5-dev-tools -y
 sudo apt-get install libminiupnpc-dev --with-miniupnpc and --enable-upnp-default -y 
 clear
 echo "#### Cloning Repo ####"
