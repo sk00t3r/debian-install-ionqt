@@ -10,6 +10,7 @@ echo "#### Updating Ubuntu/Debian ####"
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
+sudo apt-get update -y
 clear
 echo "#### Installing Dependencies ####"
 sudo apt-get install autoconf -y 
