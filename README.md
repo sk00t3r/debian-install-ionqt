@@ -8,7 +8,8 @@ curl -s https://tinyurl.com/jqn7eak | python
 
 Here is the pre-tinyurl link : https://gist.githubusercontent.com/sk00t3r/ff9b32c5f06bf289a54b794a97469cf8/raw/331a434ae9010c1bcfaa3cbeae7f5abfff964dc9/installQT.py
 
-Note: My code is completely open, but piping to python/bash can be dangerous.  For a safer install, review the code and then follow the instructions below.
+# Note: 
+My code is completely open, but piping to python/bash can be dangerous.  For a safer install, review the code and then follow the instructions below.
 
 cd /opt
 
