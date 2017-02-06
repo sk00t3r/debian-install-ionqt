@@ -36,7 +36,7 @@ sudo apt-get install libgmp-dev -y
 sudo apt-get install libprotobuf-dev -y
 sudo apt-get install libqrencode-dev -y
 sudo apt-get install libqrencode-devinstall -y
-sudo apt-get install libqt5core5a-y
+sudo apt-get install libqt5core5a -y
 sudo apt-get install libqt5dbus5 -y
 sudo apt-get install libqt5gui5 -y 
 sudo apt-get install libssl-dev -y 
