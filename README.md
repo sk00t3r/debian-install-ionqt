@@ -20,5 +20,6 @@ sudo chmod 755 installQT.py
 sudo ./installQT.py
 
 # For VPS Installs:
+Thanks to Bige for letting me use his VPS' and his time in troubleshooting.
 
 curl -s https://gist.githubusercontent.com/sk00t3r/5ede0e40ddf9c83c12fcbd1fe858b4fb/raw/21efdcfb3eaee9d34f17839968e9d2f473a70175/vps-u16.sh | bash
