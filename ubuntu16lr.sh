@@ -19,6 +19,7 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo swapon -s
 sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
+clear
 echo "#### Installing Dependencies ####"
 sudo apt-get install autoconf -y 
 sudo apt-get install autogen -y
