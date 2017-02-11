@@ -50,7 +50,7 @@ sudo ./installQTvps.py
 
 Copy the ion.conf to the correct directory.
 
-# Installing Iond On Linux.
+# Installing Ion.d On Linux.
 
 This install will detect your linux distro and install iond if it is supported. If your distro is not suported do not worry, I am working on more distros all the time.
 
