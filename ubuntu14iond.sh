@@ -25,7 +25,7 @@ echo "#### Updating Debian 14.xx ####"
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
-sudo apt-get install software-properties-common 
+sudo apt-get install software-properties-common -y 
 sudo apt-get install automake -y 
 sudo apt-get install libevent-dev -y
 sudo apt-get install libminiupnpc-dev -y
@@ -43,8 +43,6 @@ sudo apt-get install autoconf -y
 sudo apt-get install pkg-config -y
 sudo apt-get install libssl-dev -y
 sudo apt-get install libcrypto++-dev -4
-sudo apt-get install -y
-sudo apt-get install -y
 sudo apt-get install libdb5.3++-dev -y
 clear
 echo "#### Installing silknetwork repository ####"
