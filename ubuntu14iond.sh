@@ -21,7 +21,7 @@ sudo swapon /swapfile
 sudo swapon -s
 sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
 clear
-echo "#### Updating Debian 16.xx ####"
+echo "#### Updating Debian 14.xx ####"
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
