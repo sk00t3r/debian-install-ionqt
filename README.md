@@ -1,9 +1,13 @@
 # Installing The IonQT Wallet On Linux.
-
 This install will detect your linux distro and install the QT wallet if it is supported. If your distro is not suported do not worry, I am working on more distros all the time.
 
 # Note: 
+You may have to install curl (not all distros cone with this installed). To install curl run the following:
+
+sudp apt-get install curl -y
+
 My code is completely open, but piping to python/bash can be dangerous.  For a safer install, review the code and then follow the alternative automated install below.
+
 
 curl -s https://gist.githubusercontent.com/sk00t3r/ff9b32c5f06bf289a54b794a97469cf8/raw/331a434ae9010c1bcfaa3cbeae7f5abfff964dc9/installQT.py | python
 
@@ -24,12 +28,15 @@ sudo ./installQT.py
 Copy the ion.conf to the correct directory.
 
 # For Low RAM VPS Installs:
-
 This install will detect your linux distro and install the QT wallet if it is supported. If your distro is not suported do not worry, I am working on more distros all the time.
 
 Special thanks to bige for letting me use his VPS' and his time in troubleshooting.
 
-# Note: 
+# Note:
+You may have to install curl (not all distros cone with this installed). To install curl run the following:
+
+sudp apt-get install curl -y
+
 My code is completely open, but piping to python/bash can be dangerous.  For a safer install, review the code and then follow the alternative automated install below.
 
 curl -s https://gist.githubusercontent.com/sk00t3r/90ba3cef5e959dd581b562db8673ad8a/raw/ad6c5a4c1ebf1a37adbf3071a6588c0c474d72c1/installQTvps.py | python
@@ -51,12 +58,15 @@ sudo ./installQTvps.py
 Copy the ion.conf to the correct directory.
 
 # Installing Ion.d On Linux.
-
 This install will detect your linux distro and install iond if it is supported. If your distro is not suported do not worry, I am working on more distros all the time.
 
 Special thanks to jord for letting me use his original iond code.
 
 # Note: 
+You may have to install curl (not all distros cone with this installed). To install curl run the following:
+
+sudp apt-get install curl -y
+
 My code is completely open, but piping to python/bash can be dangerous.  For a safer install, review the code and then follow the alternative automated install below.
 
 curl -s https://gist.githubusercontent.com/sk00t3r/a08fff9b7768c2fa76e2f2ff6f6bf692/raw/06b816bdabaecb34388607caec645bd1aaece53e/installiond.py | python
