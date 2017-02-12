@@ -50,6 +50,7 @@ sudo apt-get install libqt5gui5 -y
 sudo apt-get install libssl-dev -y 
 sudo apt-get install libtool -y 
 sudo apt-get install make -y
+sudo apt-getinstall miniupnpc -y
 sudo apt-get install pkg-config -y
 sudo apt-get install protobuf-compiler -y 
 sudo apt-get install qt5-default -y
