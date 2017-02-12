@@ -13,6 +13,14 @@ clear
 echo "#### Change to home directory ####"
 cd ~/
 clear
+echo "#### Creating Swap ####"
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo swapon -s
+sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
+clear
 echo "#### Updating Debian 16.xx ####"
 sudo apt-get update -y
 sudo apt-get upgrade -y
