@@ -33,7 +33,7 @@ sudo apt-get update -y
 sudo apt-get ugrade -y
 clear
 echo "#### Downloading IOND Core ####"
-git clone https://github.com/Ion-Network/Ion-Core.git ion
+git clone https://github.com/ionomy/ion
 clear
 echo "#### Installing IOND Core ####"
 cd ion/src
