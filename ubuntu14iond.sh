@@ -25,7 +25,27 @@ echo "#### Updating Debian 16.xx ####"
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
-sudo apt-get install software-properties-common python-software-properties git build-essential libtool autotools-dev autoconf pkg-config libssl-dev libcrypto++-dev libevent-dev automake libminiupnpc-dev libgmp-dev libboost-all-dev libdb5.3-dev libdb5.3++-dev -y
+sudo apt-get install software-properties-common 
+sudo apt-get install automake -y 
+sudo apt-get install libevent-dev -y
+sudo apt-get install libminiupnpc-dev -y
+sudo apt-get install miniupnpc -y
+sudo apt-get install libevent-dev -y
+sudo apt-get install libgmp-dev -y
+sudo apt-get install libboost-all-dev -y
+sudo apt-get install libdb5.3-dev -y
+sudo apt-get install python-software-properties -y 
+sudo apt-get install git -y 
+sudo apt-get install build-essential -y
+sudo apt-get install libtool -y 
+sudp apt-get install autotools-dev -y
+sudo apt-get install autoconf -y
+sudo apt-get install pkg-config -y
+sudo apt-get install libssl-dev -y
+sudo apt-get install libcrypto++-dev -4
+sudo apt-get install -y
+sudo apt-get install -y
+sudo apt-get install libdb5.3++-dev -y
 clear
 echo "#### Installing silknetwork repository ####"
 sudo add-apt-repository ppa:silknetwork/silknetwork -y
@@ -33,7 +53,7 @@ sudo apt-get update -y
 sudo apt-get ugrade -y
 clear
 echo "#### Downloading IOND Core ####"
-git clone https://github.com/Ion-Network/Ion-Core.git ion
+git clone https://github.com/ionomy/ion
 clear
 echo "#### Installing IOND Core ####"
 cd ion/src
