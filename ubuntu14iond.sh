@@ -4,7 +4,7 @@ echo "#### Installing Sudo ####"
 apt-get install sudo -y
 clear
 sudo "#### Stopping iond ####"
-iond stop
+sudo iond stop
 echo "### Removing old ION"
 rm -rf /usr/bin/iond
 rm -rf /usr/local/bin/iond
