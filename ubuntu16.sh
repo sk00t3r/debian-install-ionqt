@@ -42,6 +42,7 @@ sudo apt-get install libqt5gui5 -y
 sudo apt-get install libssl-dev -y 
 sudo apt-get install libtool -y 
 sudo apt-get install make -y
+sudo apt-getinstall miniupnpc -y
 sudo apt-get install pkg-config -y
 sudo apt-get install protobuf-compiler -y 
 sudo apt-get install qt5-default -y
@@ -49,7 +50,7 @@ sudo apt-get install qt5-qmake -y
 sudo apt-get install qtbase5-dev-tools -y 
 sudo apt-get install qttools5-dev -y
 sudo apt-get install qttools5-dev-tools -y
-sudo apt-get install libminiupnpc-dev --with-miniupnpc and --enable-upnp-default -y 
+sudo apt-get install libminiupnpc-dev -y
 clear
 echo "#### Cloning Repo ####"
 git clone https://github.com/Ion-Network/Ion-Core
