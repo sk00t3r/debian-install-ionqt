@@ -56,7 +56,7 @@ sudo apt-get install qttools5-dev-tools -y
 sudo apt-get install libminiupnpc-dev -y 
 clear
 echo "#### Cloning Repo ####"
-git clone https://github.com/Ion-Network/Ion-Core
+git clone https://github.com/ionomy/ion
 clear
 echo "#### Changing To The Ion-Core Directory ####"
 cd Ion-Core/
