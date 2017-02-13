@@ -56,7 +56,7 @@ echo "#### Cloning Repo ####"
 git clone https://github.com/ionomy/ion
 clear
 echo "#### Changing To The Ion-Core Directory ####"
-cd Ion-Core/
+cd ion/
 clear
 echo "#### Making ####"
 sudo qmake
