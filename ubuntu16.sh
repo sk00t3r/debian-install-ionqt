@@ -58,36 +58,27 @@ clear
 echo "#### Changing To The Ion-Core Directory ####"
 cd ion/
 clear
-read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N] " response
-response=${response,,}
-if $response = y
-then
-#read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N] " response
-#if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
-  #then
-  #echo "#### Creating ION folder ####"
-  #sudo mkdir ~/.ionomy/
-  #clear
-  #echo "#### Backing up & Moving Old ION wallet.dat & ion.conf ####"
-  #read -rst 1.8;
-  #sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-  #sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-  #sudo mv ~/.ion/wallet.dat ~/.ionomy/
-  #sudo mv ~/.ion/ion.conf ~/.ionomy/
-  #clear
-  #echo "#### Making ####"
-  #sudo qmake
-  #sudo make
-  #clear
-  #echo "#### Starting Ion-QT Wallet ####"
-  #sudo ./ionx-qt
-  echo "You said YES!!"
-else
+read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? Type no if this is is a new install [Y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+  then
+  echo "Great we will begin backing up your files and noving them to new wallet"
+  echo "#### Creating ION folder ####"
+  sudo mkdir ~/.ionomy/
+  echo "#### Backing up & Moving Old ION wallet.dat & ion.conf ####"
+  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+  sudo mv ~/.ion/wallet.dat ~/.ionomy/
+  sudo mv ~/.ion/ion.conf ~/.ionomy/
+  echo "#### Making ####"
+  sudo qmake
+  sudo make
+  echo "#### Starting Ion-QT Wallet ####"
+  sudo ./ionx-qt
+else 
+echo " Okay, we will not backup your files."
 #echo "#### Making ####"
-#sudo qmake
-#sudo make
-#clear
-#echo "#### Starting Ion-QT Wallet ####"
-#sudo ./ionx-qt
-echo "You Said No!!"
+sudo qmake
+sudo make
+echo "#### Starting Ion-QT Wallet ####"
+sudo ./ionx-qt
 fi
