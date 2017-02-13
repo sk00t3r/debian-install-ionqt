@@ -4,18 +4,18 @@ echo "#### Changing to home directory ####"
 cd ~
 clear
 echo "#### Installing Sudo ####"
-read -rst 1.8
+read -rst 10
 apt-get install sudo -y
 clear
 echo "#### Updating Ubuntu/Debian ####"
-read -rst 1.8
+read -rst 10
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get update -y
 clear
 echo "#### Installing Dependencies ####"
-read -rst 1.8
+read -rst 10
 sudo apt-get install autoconf -y 
 sudo apt-get install autogen -y
 sudo apt-get install automake -y
@@ -56,18 +56,18 @@ sudo apt-get install qttools5-dev-tools -y
 sudo apt-get install libminiupnpc-dev -y
 clear
 echo "#### Cloning Repo ####"
-read -rst 1.8
+read -rst 10
 git clone https://github.com/ionomy/ion
 clear
 echo "#### Changing To The Ion-Core Directory ####"
-read -rst 1.8
+read -rst 10
 cd ion/
 clear
-read -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N]" answer
+read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N] " answer
 if [[ "$answer" =~ ^([yY][eE][sS]|[yY])+$ ]]
   then
   echo "#### Creating ION folder ####"
-  read -rst 1.8
+  read -rst 10
   sudo mkdir ~/.ionomy/
   clear
   echo "#### Backing up & Moving Old ION wallet.dat & ion.conf ####"
@@ -78,7 +78,7 @@ if [[ "$answer" =~ ^([yY][eE][sS]|[yY])+$ ]]
   sudo mv ~/.ion/ion.conf ~/.ionomy/
   clear
   echo "#### Making ####"
-  read -rst 1.8
+  read -rst 10
   sudo qmake
   sudo make
   clear
@@ -87,11 +87,11 @@ if [[ "$answer" =~ ^([yY][eE][sS]|[yY])+$ ]]
   sudo ./ionx-qt
 else
 echo "#### Making ####"
-read -rst 1.8
+read -rst 10
 sudo qmake
 sudo make
 clear
 echo "#### Starting Ion-QT Wallet ####"
-read -rst 1.8
+read -rst 10
 sudo ./ionx-qt
 fi
