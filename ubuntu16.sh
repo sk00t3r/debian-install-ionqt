@@ -65,17 +65,26 @@ cd ion/
 clear
 read -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N]" answer
 if [[ "$answer" =~([yY][eE][sS]|[yY])+$ ]]
-then
-echo "#### Creating ION folder ####"
-read -rst 0.8
-sudo mkdir ~/.ionomy/
-clear
-echo "#### Backing up & Moving Old ION wallet.dat & ion.conf ####"
-read -rst 0.8
-sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-sudo mv ~/.ion/wallet.dat ~/.ionomy/
-sudo mv ~/.ion/ion.conf ~/.ionomy/
+  then
+  echo "#### Creating ION folder ####"
+  read -rst 0.8
+  sudo mkdir ~/.ionomy/
+  clear
+  echo "#### Backing up & Moving Old ION wallet.dat & ion.conf ####"
+  read -rst 0.8
+  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+  sudo mv ~/.ion/wallet.dat ~/.ionomy/
+  sudo mv ~/.ion/ion.conf ~/.ionomy/
+  clear
+  echo "#### Making ####"
+  read -rst 0.8
+  sudo qmake
+  sudo make
+  clear
+  echo "#### Starting Ion-QT Wallet ####"
+  read -rst 0.8
+  sudo ./ionx-qt
 else
 echo "#### Making ####"
 read -rst 0.8
@@ -85,3 +94,4 @@ clear
 echo "#### Starting Ion-QT Wallet ####"
 read -rst 0.8
 sudo ./ionx-qt
+fi
