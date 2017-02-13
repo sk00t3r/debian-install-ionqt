@@ -63,6 +63,16 @@ echo "#### Changing To The Ion-Core Directory ####"
 read -rst 0.8
 cd ion/
 clear
+echo "#### Creating ION folder ####"
+read -rst 0.8
+sudo mkdir ~/.ionomy/
+clear
+echo "#### Backing up & Moving Old ION wallet.dat & ion.conf ####"
+read -rst 0.8
+sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+sudo mv ~/.ion/wallet.dat ~/.ionomy/
+sudo mv ~/.ion/ion.conf ~/.ionomy/
 echo "#### Making ####"
 read -rst 0.8
 sudo qmake
