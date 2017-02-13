@@ -56,15 +56,15 @@ sudo apt-get install qttools5-dev-tools -y
 sudo apt-get install libminiupnpc-dev -y
 clear
 echo "#### Cloning Repo ####"
-read -s -t 5;
+read -t 5;
 git clone https://github.com/ionomy/ion
 clear
 echo "#### Changing To The Ion-Core Directory ####"
-read -s -t 5;
+read -t 5;
 cd ion/
 clear
-read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N] " answer
-if [[ "$answer" =~ ^([yY][eE][sS]|[yY])+$ ]]
+read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
   then
   #echo "#### Creating ION folder ####"
   #read -rst 1.8;
