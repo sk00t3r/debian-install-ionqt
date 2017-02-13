@@ -4,18 +4,18 @@ echo "#### Changing to home directory ####"
 cd ~
 clear
 echo "#### Installing Sudo ####"
-read -rst 1.8;
+read -s -t 5;
 apt-get install sudo -y
 clear
 echo "#### Updating Ubuntu/Debian ####"
-read -rst 1.8;
+read -s -t 5;
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get update -y
 clear
 echo "#### Installing Dependencies ####"
-read -rst 1.8;
+read -s -t 5;
 sudo apt-get install autoconf -y 
 sudo apt-get install autogen -y
 sudo apt-get install automake -y
@@ -56,42 +56,44 @@ sudo apt-get install qttools5-dev-tools -y
 sudo apt-get install libminiupnpc-dev -y
 clear
 echo "#### Cloning Repo ####"
-read -rst 1.8;
+read -s -t 5;
 git clone https://github.com/ionomy/ion
 clear
 echo "#### Changing To The Ion-Core Directory ####"
-read -rst 1.8;
+read -s -t 5;
 cd ion/
 clear
 read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N] " answer
 if [[ "$answer" =~ ^([yY][eE][sS]|[yY])+$ ]]
   then
-  echo "#### Creating ION folder ####"
-  read -rst 1.8;
-  sudo mkdir ~/.ionomy/
-  clear
-  echo "#### Backing up & Moving Old ION wallet.dat & ion.conf ####"
-  read -rst 1.8;
-  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-  sudo mv ~/.ion/wallet.dat ~/.ionomy/
-  sudo mv ~/.ion/ion.conf ~/.ionomy/
-  clear
-  echo "#### Making ####"
-  read -rst 1.8;
-  sudo qmake
-  sudo make
-  clear
-  echo "#### Starting Ion-QT Wallet ####"
-  read -rst 1.8;
-  sudo ./ionx-qt
+  #echo "#### Creating ION folder ####"
+  #read -rst 1.8;
+  #sudo mkdir ~/.ionomy/
+  #clear
+  #echo "#### Backing up & Moving Old ION wallet.dat & ion.conf ####"
+  #read -rst 1.8;
+  #sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+  #sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+  #sudo mv ~/.ion/wallet.dat ~/.ionomy/
+  #sudo mv ~/.ion/ion.conf ~/.ionomy/
+  #clear
+  #echo "#### Making ####"
+  #read -rst 1.8;
+  #sudo qmake
+  #sudo make
+  #clear
+  #echo "#### Starting Ion-QT Wallet ####"
+  #read -rst 1.8;
+  #sudo ./ionx-qt
+  echo "You said YES!!"
 else
-echo "#### Making ####"
-read -rst 1.8;
-sudo qmake
-sudo make
-clear
-echo "#### Starting Ion-QT Wallet ####"
-read -rst 1.8;
-sudo ./ionx-qt
+#echo "#### Making ####"
+#read -rst 1.8;
+#sudo qmake
+#sudo make
+#clear
+#echo "#### Starting Ion-QT Wallet ####"
+#read -rst 1.8;
+#sudo ./ionx-qt
+echo "You Said No!!"
 fi
