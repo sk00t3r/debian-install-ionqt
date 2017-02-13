@@ -4,15 +4,18 @@ echo "#### Changing to home directory ####"
 cd ~
 clear
 echo "#### Installing Sudo ####"
+read -rst 0.8
 apt-get install sudo -y
 clear
 echo "#### Updating Ubuntu/Debian ####"
+read -rst 0.8
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get update -y
 clear
 echo "#### Installing Dependencies ####"
+read -rst 0.8
 sudo apt-get install autoconf -y 
 sudo apt-get install autogen -y
 sudo apt-get install automake -y
@@ -53,14 +56,18 @@ sudo apt-get install qttools5-dev-tools -y
 sudo apt-get install libminiupnpc-dev -y
 clear
 echo "#### Cloning Repo ####"
+read -rst 0.8
 git clone https://github.com/ionomy/ion
 clear
 echo "#### Changing To The Ion-Core Directory ####"
+read -rst 0.8
 cd ion/
 clear
 echo "#### Making ####"
+read -rst 0.8
 sudo qmake
 sudo make
 clear
 echo "#### Starting Ion-QT Wallet ####"
+read -rst 0.8
 sudo ./ionx-qt
