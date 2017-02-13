@@ -63,6 +63,9 @@ echo "#### Changing To The Ion-Core Directory ####"
 read -rst 0.8
 cd ion/
 clear
+read -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N]" answer
+if [[ "$answer" =~([yY][eE][sS]|[yY])+$ ]]
+then
 echo "#### Creating ION folder ####"
 read -rst 0.8
 sudo mkdir ~/.ionomy/
@@ -73,6 +76,7 @@ sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
 sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
 sudo mv ~/.ion/wallet.dat ~/.ionomy/
 sudo mv ~/.ion/ion.conf ~/.ionomy/
+else
 echo "#### Making ####"
 read -rst 0.8
 sudo qmake
