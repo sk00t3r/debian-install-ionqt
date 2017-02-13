@@ -30,4 +30,4 @@ elif version == "14.04":
         subprocess.call("./ubuntu14vps.sh", shell=True)
 
 else:
-        print("Sorry") distro + version ("is not yet supported.")
+        print("Sorry version not yet supported.")
