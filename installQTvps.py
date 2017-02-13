@@ -18,6 +18,12 @@ elif version == "16.10":
         urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu16vps.sh", "ubuntu16vps.sh")
         os.chmod('ubuntu16vps.sh', 0755)        
         subprocess.call("./ubuntu16vps.sh", shell=True)
+        
+elif distro == "debian":
+        urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu16vps.sh", "ubuntu16vps.sh")
+        os.chmod('ubuntu16vps.sh', 0755)        
+        subprocess.call("./ubuntu16vps.sh", shell=True)
+
 
 elif version == "14.04":
         urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu14vps.sh", "ubuntu14vps.sh")
