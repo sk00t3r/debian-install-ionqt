@@ -64,8 +64,11 @@ read -t 5;
 cd ion/
 clear
 read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N] " response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
-  then
+response=${response,,}
+if [[ "$response" =~ ^(yes|y)$ ]]
+#read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N] " response
+#if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+  #then
   #echo "#### Creating ION folder ####"
   #read -rst 1.8;
   #sudo mkdir ~/.ionomy/
