@@ -60,7 +60,7 @@ cd ion/
 clear
 read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N] " response
 response=${response,,}
-if [[ "$response" =~ ^(yes|y)$ ]]
+if $response = y
 then
 #read -r -p "Would you like your wallet.dat and ion.conf file backedup and auto-restored? [Y/N] " response
 #if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
