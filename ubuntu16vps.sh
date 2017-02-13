@@ -50,7 +50,7 @@ sudo apt-get install libqt5gui5 -y
 sudo apt-get install libssl-dev -y 
 sudo apt-get install libtool -y 
 sudo apt-get install make -y
-sudo apt-getinstall miniupnpc -y
+sudo apt-get install miniupnpc -y
 sudo apt-get install pkg-config -y
 sudo apt-get install protobuf-compiler -y 
 sudo apt-get install qt5-default -y
@@ -64,8 +64,16 @@ echo "#### Cloning Repo ####"
 git clone https://github.com/ionomy/ion
 clear
 echo "#### Changing To The Ion-Core Directory ####"
-cd Ion-Core/
+cd ion/
 clear
+echo "#### Creating ION folder ####"
+sudo mkdir ~/.ionomy/
+clear
+echo "#### Backing up & Moving Old ION wallet.dat & ion.conf ####"
+sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+sudo mv ~/.ion/wallet.dat ~/.ionomy/
+sudo mv ~/.ion/ion.conf ~/.ionomy/
 echo "#### Making ####"
 sudo qmake
 sudo make
