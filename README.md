@@ -6,7 +6,7 @@ My code is completely open, but piping to python/bash can be dangerous.  For a s
 
 You may have to install curl (not all distros cone with this installed). To install curl run the following:
 
-sudp apt-get install curl -y
+sudo apt-get install curl -y
 
 curl -s https://gist.githubusercontent.com/sk00t3r/ff9b32c5f06bf289a54b794a97469cf8/raw/331a434ae9010c1bcfaa3cbeae7f5abfff964dc9/installQT.py | python
 
@@ -36,7 +36,7 @@ My code is completely open, but piping to python/bash can be dangerous.  For a s
 
 You may have to install curl (not all distros cone with this installed). To install curl run the following:
 
-sudp apt-get install curl -y
+sudo apt-get install curl -y
 
 curl -s https://gist.githubusercontent.com/sk00t3r/90ba3cef5e959dd581b562db8673ad8a/raw/ad6c5a4c1ebf1a37adbf3071a6588c0c474d72c1/installQTvps.py | python
 
@@ -66,7 +66,7 @@ My code is completely open, but piping to python/bash can be dangerous.  For a s
 
 You may have to install curl (not all distros cone with this installed). To install curl run the following:
 
-sudp apt-get install curl -y
+sudo apt-get install curl -y
 
 curl -s https://gist.githubusercontent.com/sk00t3r/a08fff9b7768c2fa76e2f2ff6f6bf692/raw/06b816bdabaecb34388607caec645bd1aaece53e/installiond.py | python
 
