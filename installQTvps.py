@@ -20,9 +20,9 @@ elif version == "16.10":
         subprocess.call("./ubuntu16vps.sh", shell=True)
         
 elif version == "8.0":
-        urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu16vps.sh", "ubuntu16vps.sh")
-        os.chmod('ubuntu16vps.sh', 0755)        
-        subprocess.call("./ubuntu16vps.sh", shell=True)
+        urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/raspberry_pi/rpi.sh", "rpi.sh")
+        os.chmod('rpi.sh', 0755)        
+        subprocess.call("./rpi.sh", shell=True)
 
 elif version == "14.04":
         urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/debian-install-ionqt/master/ubuntu14vps.sh", "ubuntu14vps.sh")
