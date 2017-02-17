@@ -26,8 +26,8 @@ sudo ./installQT.py
 
 Copy the ion.conf to the correct directory.
 
-# For Low RAM VPS Installs:
-This install will detect your linux distro and install the QT wallet if it is supported. If your distro is not suported do not worry, I am working on more distros all the time.
+# For Low RAM VPS or Raspberry Pi Installs:
+This install will detect your linux distro and install the QT wallet if it is supported. If your distro is not suported do not worry, I am working on more distros all the time. The Raspberry Pi needs a minimum of a 8GB card. You also have to expand the drive to free up the needed space. sudo raspi-config and select option 1 then reboot.
 
 Special thanks to bige for letting me use his VPS' and his time in troubleshooting.
 
