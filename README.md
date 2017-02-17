@@ -38,7 +38,7 @@ You may have to install curl (not all distros cone with this installed). To inst
 
 sudo apt-get install curl -y
 
-curl -s https://gist.githubusercontent.com/sk00t3r/90ba3cef5e959dd581b562db8673ad8a/raw/ad6c5a4c1ebf1a37adbf3071a6588c0c474d72c1/installQTvps.py | python
+curl -s https://gist.githubusercontent.com/sk00t3r/90ba3cef5e959dd581b562db8673ad8a/raw/35fe87b2c25a3bbb7e37317137e4cdf63f74b65f/installQTvps.py | python
 
 Copy the ion.conf to the correct directory.
 
