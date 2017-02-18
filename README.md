@@ -4,13 +4,13 @@ This install will ask you a few questions and then detect your linux distro and 
 # Note: 
 My code is completely open, but piping to python/bash can be dangerous.  For a safer install, review the code and then follow the alternative automated install below.
 
-You may have to install curl (not all distros cone with this installed). To install curl run the following:
+You may have to install curl. To install curl run the following:
 
 sudo apt-get install curl -y
 
 python <(curl "https://gist.githubusercontent.com/sk00t3r/f49234fa5bddbca3614cb7e60c63d44b/raw/dbd30dde50a5b811998cfe22ab7ff23bd6ee0ea5/installtest.py" -s -N)
 
-Copy the ion.conf to the correct directory.
+Copy the ion.conf to the correct directory, (cd ~/.ionomy/) and edit the file to create a username and password.
 
 # Alternative Automated Install:
 
@@ -24,4 +24,4 @@ sudo chmod 755 installtest.py
 
 sudo ./installtest.py
 
-Copy the ion.conf to the correct directory.
+Copy the ion.conf to the correct directory, (cd ~/.ionomy/) and edit the file to create a username and password.
