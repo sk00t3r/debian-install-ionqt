@@ -13,14 +13,14 @@ clear
 echo "#### Change to home directory ####"
 cd ~/
 clear
-#echo "#### Creating Swap ####"
-#sudo fallocate -l 4G /swapfile
-#sudo chmod 600 /swapfile
-#sudo mkswap /swapfile
-#sudo swapon /swapfile
-#sudo swapon -s
-#sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
-#clear
+echo "#### Creating Swap ####"
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo swapon -s
+sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
+clear
 echo "#### Updating Debian 14.xx ####"
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -45,11 +45,6 @@ sudo apt-get install libssl-dev -y
 sudo apt-get install libcrypto++-dev -y
 sudo apt-get install libdb5.3++-dev -y
 sudo apt-get install zip -y
-clear
-echo "#### Installing silknetwork repository ####"
-sudo add-apt-repository ppa:silknetwork/silknetwork -y
-sudo apt-get update -y
-sudo apt-get ugrade -y
 clear
 echo "#### Downloading IOND Core ####"
 git clone https://github.com/ionomy/ion
