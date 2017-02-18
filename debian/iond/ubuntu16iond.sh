@@ -42,7 +42,7 @@ sudp apt-get install autotools-dev -y
 sudo apt-get install autoconf -y
 sudo apt-get install pkg-config -y
 sudo apt-get install libssl-dev -y
-sudo apt-get install libcrypto++-dev -4
+sudo apt-get install libcrypto++-dev -y
 sudo apt-get install libdb5.3++-dev -y
 sudo apt-get install zip -y
 clear
