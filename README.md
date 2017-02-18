@@ -8,7 +8,7 @@ You may have to install curl (not all distros cone with this installed). To inst
 
 sudo apt-get install curl -y
 
-curl -s https://gist.githubusercontent.com/sk00t3r/f49234fa5bddbca3614cb7e60c63d44b/raw/5b7596a13a38ed8bc0e72a51c0ebb8f191b99d38/installtest.py | python
+curl -s https://gist.githubusercontent.com/sk00t3r/f49234fa5bddbca3614cb7e60c63d44b/raw/9d547c7a49ec46a6de655d756c15eba68e7c9229/installtest.py | python
 
 Copy the ion.conf to the correct directory.
 
