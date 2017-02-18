@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-
 import platform
 import subprocess
 import urllib
@@ -68,7 +67,7 @@ def iond():
         else:
                 print("Sorry version not yet supported.")
 
-choice = raw_input(" Type 'A' to install the QT wallet on your personal dekstop or laptop. \n Tpye 'B' to install the QT wallet on a low RAM VPS. \n Type 'C' to install the QT wallet on a Raspberry Pi or a Pine64. \n Type 'D' to install the ion.d service only. \n \n ")
+choice = raw_input(" Type 'A' to install the QT wallet on your personal dekstop or laptop. \n \n Tpye 'B' to install the QT wallet on a low RAM VPS. \n \n Type 'C' to install the QT wallet on a Raspberry Pi or a Pine64. \n \n Type 'D' to install the ion.d service only. \n \n \n Type 'Q' to quit. \n \n \n ")
 
 if choice == 'A' or choice == 'a':
         print("Okay, installing QT wallet on your personal computer.")
@@ -82,5 +81,7 @@ elif choice == 'C' or choice == 'c':
 elif choice == 'D' or choice == 'd':
         print("Okay, installing the ion.d service on your computer.")
         iond()
+elif choice == 'Q' or choice == 'q':
+        print("Okay, goodbye.")
 else:
-        print "Invalid choice, program will now exit."
+        print("Invalid choice, program will now exit.")
