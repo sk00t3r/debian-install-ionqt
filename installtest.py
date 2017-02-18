@@ -70,18 +70,18 @@ def iond():
 choice = raw_input(" \n Type 'A' to install the QT wallet on your personal dekstop or laptop. \n \n Tpye 'B' to install the QT wallet on a low RAM VPS. \n \n Type 'C' to install the QT wallet on a Raspberry Pi or a Pine64. \n \n Type 'D' to install the ion.d service only. \n \n \n Type 'Q' to quit. \n \n \n ")
 
 if choice == 'A' or choice == 'a':
-        print("\n Okay, installing QT wallet on your personal computer.")
+        print("\n Okay, installing QT wallet on your personal computer. \n")
         qt()
 elif choice == 'B' or choice == 'b':
-        print("\n Okay, installing QT wallet on your VPS.")
+        print("\n Okay, installing QT wallet on your VPS. \n")
         vps()
 elif choice == 'C' or choice == 'c':
-        print("\n Okay, installing QT wallet on your Raspberry Pi or Pine64.")
+        print("\n Okay, installing QT wallet on your Raspberry Pi or Pine64. \n")
         arm()
 elif choice == 'D' or choice == 'd':
-        print("\n Okay, installing the ion.d service on your computer.")
+        print("\n Okay, installing the ion.d service on your computer. \n")
         iond()
 elif choice == 'Q' or choice == 'q':
-        print("\n Okay, goodbye.")
+        print("\n Okay, goodbye. \n")
 else:
-        print("\n Invalid choice, program will now exit.")
+        print("\n Invalid choice, program will now exit. \n")
