@@ -64,8 +64,6 @@ echo "#### Changing To The Ion-Core Directory ####"
 echo " "
 cd ion/
 clear
-echo " Okay, we will not backup your files."
-echo " "
 echo "#### Making ####"
 echo " "
 sudo qmake
