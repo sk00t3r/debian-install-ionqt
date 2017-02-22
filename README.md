@@ -18,7 +18,7 @@ cd /opt
 
 sudo apt-get install git -y
 
-sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testing/install.py
+sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/master/install.py
 
 sudo chmod 755 install.py
 
