@@ -19,6 +19,11 @@ def qt():
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16.sh", "ubuntu16.sh")
                 os.chmod('ubuntu16.sh', 0755)
                 subprocess.call("./ubuntu16.sh", shell=True)
+                
+        elif version == "18.1":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16.sh", "ubuntu16.sh")
+                os.chmod('ubuntu16.sh', 0755)
+                subprocess.call("./ubuntu16.sh", shell=True)
 
         elif version == "14.04":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu14.sh", "ubuntu14.sh")
@@ -32,10 +37,17 @@ def vps():
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/untu16vps.sh", "ubuntu16vps.sh")
                 os.chmod('ubuntu16vps.sh', 0755)
                 subprocess.call("./ubuntu16vps.sh", shell=True)
+        
         elif version == "16.10":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16vps.sh", "ubuntu16vps.sh")
                 os.chmod('ubuntu16vps.sh', 0755)
                 subprocess.call("./ubuntu16vps.sh", shell=True)
+        
+        elif version == "18.1":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16vps.sh", "ubuntu16vps.sh")
+                os.chmod('ubuntu16vps.sh', 0755)
+                subprocess.call("./ubuntu16vps.sh", shell=True)
+        
         elif version == "14.04":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu14vps.sh", "ubuntu14vps.sh")
                 os.chmod('ubuntu14vps.sh', 0755)
@@ -56,10 +68,17 @@ def iond():
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
                 subprocess.call("./ubuntu16iond.sh", shell=True)
+        
         elif version == "16.10":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
                 subprocess.call("./ubuntu16iond.sh", shell=True)
+        
+        elif version == "18.1":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
+                os.chmod('ubuntu16iond.sh', 0755)
+                subprocess.call("./ubuntu16iond.sh", shell=True)
+        
         elif version == "14.04":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu14iond.sh", "ubuntu14iond.sh")
                 os.chmod('ubuntu14iond.sh', 0755)
