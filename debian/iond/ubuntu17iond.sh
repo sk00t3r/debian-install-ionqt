@@ -109,7 +109,7 @@ fi
 clear
 echo "#### changing to /user/bin ####"
 echo " "
-cd /usr/bin
+cd /usr/local/bin
 echo "#### Would you like to start iond in print to console mode? [Y/n] ####"
 echo " "
 read console
@@ -120,7 +120,7 @@ if [ $console == "Y" ] || [ $console == "y" ]
 	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
-  	sudo ./iond --printtoconsole
+  	sudo iond --printtoconsole $
 elif [ $console == "N" ] || [ $console == "n" ]
 	then
   	clear
@@ -128,10 +128,10 @@ elif [ $console == "N" ] || [ $console == "n" ]
 	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
-  	sudo ./iond
+  	sudo iond &
 else
   	clear
  	echo "#### Invalid choice selected, defaulting to silent mode. ####"
 	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
-	sudo ./iond
+	sudo iond &
 fi
