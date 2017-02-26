@@ -74,7 +74,7 @@ echo " "
 if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" ]
 then
   clear
-  echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
+  echo "#### Backing up original ion wallet.dat & ion.conf ####"
   echo " "
   sudo cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
   sudo cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
