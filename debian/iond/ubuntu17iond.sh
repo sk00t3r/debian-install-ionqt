@@ -87,6 +87,8 @@ else
   clear
   echo "#### Please set a username and password, you do not have to remember this and it should be long and random ####"
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
+  echo " "
+  read -p "####Press any key when you are ready to continue ####"
   Echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/master/ion.conf
   sudo nano ion.conf
