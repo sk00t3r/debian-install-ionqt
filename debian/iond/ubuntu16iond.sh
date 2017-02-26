@@ -5,22 +5,22 @@ apt-get install sudo -y
 clear
 sudo "#### Stopping iond ####"
 sudo iond stop
-#echo "### Removing old ION"
-#sudo rm -rf /usr/bin/iond
-#sudo rm -rf /usr/local/bin/iond
-#sudo rm -rf /root/ion
+echo "### Removing old ION"
+sudo rm -rf /usr/bin/iond
+sudo rm -rf /usr/local/bin/iond
+sudo rm -rf /root/ion
 clear
 echo "#### Change to home directory ####"
 cd ~/
 clear
-echo "#### Creating Swap ####"
-sudo fallocate -l 4G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo swapon -s
-sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
-clear
+#echo "#### Creating Swap ####"
+#sudo fallocate -l 4G /swapfile
+#sudo chmod 600 /swapfile
+#sudo mkswap /swapfile
+#sudo swapon /swapfile
+#sudo swapon -s
+#sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
+c#lear
 echo "#### Updating Debian 14.xx ####"
 sudo apt-get update -y
 sudo apt-get upgrade -y
