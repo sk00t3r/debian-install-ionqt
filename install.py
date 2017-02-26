@@ -65,14 +65,22 @@ def vps_qt():
         else:
                 print("Sorry version not yet supported.")
 
-def arm():
+def arm_qt():
         if version == "8.0":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/raspberry_pi/rpi.sh", "rpi.sh")
-                os.chmod('rpi.sh', 0755)
-                subprocess.call("./rpi.sh", shell=True)
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/raspberry_pi/rpi_qt.sh", "rpi_qt.sh")
+                os.chmod('rpi_qt.sh', 0755)
+                subprocess.call("./rpi_qt.sh", shell=True)
         else:
                 print("Sorry version not yet supported.")
 
+def arm_iond():
+        if version == "8.0":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/raspberry_pi/rpi_iond.sh", "rpi_iond.sh")
+                os.chmod('rpi_iond.sh', 0755)
+                subprocess.call("./rpi_iond.sh", shell=True)
+        else:
+                print("Sorry version not yet supported.")
+                
 def iond():
         if version == "16.04":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
@@ -129,7 +137,7 @@ def vps_iond():
         else:
                 print("Sorry version not yet supported.")
 
-choice = raw_input(" \n Type 'A' to install the QT wallet on your personal dekstop or laptop. \n \n Tpye 'B' to install the QT wallet on a low RAM VPS. \n \n Type 'C' to install the QT wallet on a Raspberry Pi or a Pine64. \n \n Type 'D' to install the ion.d service on your personal desktop or laptop. \n \n Type 'E' to install the ion.d service on a low RAM VPS. \n \n \n Type 'Q' to quit. \n \n \n ")
+choice = raw_input(" \n Type 'A' to install the QT wallet on your personal dekstop or laptop. \n \n Tpye 'B' to install the QT wallet on a low RAM VPS. \n \n Type 'C' to install the QT wallet on a Raspberry Pi or a Pine64. \n \n Type 'D' to install the ion.d service on your personal desktop or laptop. \n \n Type 'E' to install the ion.d service on a low RAM VPS. \n \n Type 'F' to install the ion.d service on a Raspberry Pi or a Pine64. \n \n \n Type 'Q' to quit. \n \n \n ")
 
 if choice == 'A' or choice == 'a':
         print("\n Okay, installing QT wallet on your personal computer. \n")
@@ -139,13 +147,16 @@ elif choice == 'B' or choice == 'b':
         vps_qt()
 elif choice == 'C' or choice == 'c':
         print("\n Okay, installing QT wallet on your Raspberry Pi or Pine64. \n")
-        arm()
+        arm_qt()
 elif choice == 'D' or choice == 'd':
         print("\n Okay, installing the ion.d service on your computer. \n")
         iond()
 elif choice == 'E' or choice == 'e':
         print("\n Okay, installing the ion.d service on your VPS. \n")
         vps_iond()
+elif choice == 'F' or choice == 'f':
+        print("\n Okay, installing the ion.d servce on your Raspberry Pi or Pine64. \n")
+        arm_iond()
 elif choice == 'Q' or choice == 'q':
         print("\n Okay, goodbye. \n")
 else:
