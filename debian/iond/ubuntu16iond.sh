@@ -5,10 +5,10 @@ apt-get install sudo -y
 clear
 sudo "#### Stopping iond ####"
 sudo iond stop
-echo "### Removing old ION"
-sudo rm -rf /usr/bin/iond
-sudo rm -rf /usr/local/bin/iond
-sudo rm -rf /root/ion
+#echo "### Removing old ION"
+#sudo rm -rf /usr/bin/iond
+#sudo rm -rf /usr/local/bin/iond
+#sudo rm -rf /root/ion
 clear
 echo "#### Change to home directory ####"
 cd ~/
