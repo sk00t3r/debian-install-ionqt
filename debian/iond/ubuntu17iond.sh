@@ -71,12 +71,24 @@ echo "#### Creating ION folder ####"
 echo " "
 sudo mkdir ~/.ionomy/
 clear
-echo "#### Backing up & Moving Old ION Wallet.dat & ion.conf ####"
+echo "#### Creating ION folder ####"
 echo " "
-sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-sudo mv ~/.ion/wallet.dat ~/.ionomy/
-sudo mv ~/.ion/ion.conf ~/.ionomy/
+if [ -f "~/.ionomy/ion.conf" ] $&& [ -f "~/ion/wallet.dat" ]
+then
+  clear
+  echo "#### Backing up & Moving Old ION Wallet.dat & ion.conf ####"
+  echo " "
+  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+  sudo mv ~/.ion/wallet.dat ~/.ionomy/
+  sudo mv ~/.ion/ion.conf ~/.ionomy/
+else
+  echo "#### Please set a username and password, you do not have to remember this and it should be long and random ####"
+  echo "#### Ctrl + X, Y, Enter to save file and exit ####"
+  Echo " "
+  sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/master/ion.conf
+  sudo nano ion.conf
+fi
 echo "#### changing to /user/bin ####"
 echo " "
 cd /user/bin
