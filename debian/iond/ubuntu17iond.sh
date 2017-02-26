@@ -70,7 +70,7 @@ if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" 
   sudo make -f makefile.unix
   sudo mv ~/ion/src/xiond ~/ion/src/iond
   sudo chmod 755 ~/ion/src/iond
-  sudo mv ~/ion/src/iond /usr/bin
+  sudo mv ~/ion/src/iond /usr/local/bin
 elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   then
   clear
@@ -86,7 +86,7 @@ elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   sudo make -f makefile.unix
   sudo mv ~/ion/src/xiond ~/ion/src/iond
   sudo chmod 755 ~/ion/src/iond
-  sudo mv ~/ion/src/iond /usr/bin
+  sudo mv ~/ion/src/iond /usr/local/bin
 else
   clear
   echo "#### No Existing Wallet Found, Installing IOND Core ####"
@@ -95,7 +95,7 @@ else
   sudo make -f makefile.unix
   sudo mv ~/ion/src/xiond ~/ion/src/iond
   sudo chmod 755 ~/ion/src/iond
-  sudo mv ~/ion/src/iond /usr/bin
+  sudo mv ~/ion/src/iond /usr/local/bin
   cd ~/.ionomy/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
