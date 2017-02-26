@@ -71,9 +71,9 @@ echo "#### Creating ION folder ####"
 echo " "
 sudo mkdir ~/.ionomy/
 clear
-echo "#### Creating ION folder ####"
+echo "#### Chevking for existing iond install ####"
 echo " "
-if [ -f "~/.ionomy/ion.conf" ] && [ -f "~/ion/wallet.dat" ]
+if [ -f "~/ion/wallet.dat" ]
 then
   clear
   echo "#### Backing up & Moving Old ION Wallet.dat & ion.conf ####"
@@ -83,6 +83,7 @@ then
   sudo mv ~/.ion/wallet.dat ~/.ionomy/
   sudo mv ~/.ion/ion.conf ~/.ionomy/
 else
+  clear
   echo "#### Please set a username and password, you do not have to remember this and it should be long and random ####"
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   Echo " "
