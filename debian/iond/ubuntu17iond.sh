@@ -120,18 +120,18 @@ if [ $console == "Y" ] || [ $console == "y" ]
 	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
-  	sudo iond --printtoconsole &
+  	sudo iond --printtoconsole
 elif [ $console == "N" ] || [ $console == "n" ]
 	then
   	clear
   	echo "#### Okay, starting iond in silent mode. ####"
-	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
+	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
   	sudo iond &
 else
   	clear
  	echo "#### Invalid choice selected, defaulting to silent mode. ####"
-	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
+	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
 	sudo iond &
 fi
