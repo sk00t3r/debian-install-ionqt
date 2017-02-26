@@ -73,7 +73,7 @@ sudo mkdir ~/.ionomy/
 clear
 echo "#### Creating ION folder ####"
 echo " "
-if [ -f "~/.ionomy/ion.conf" ] $&& [ -f "~/ion/wallet.dat" ]
+if [ -f "~/.ionomy/ion.conf" ] && [ -f "~/ion/wallet.dat" ]
 then
   clear
   echo "#### Backing up & Moving Old ION Wallet.dat & ion.conf ####"
