@@ -129,7 +129,7 @@ def vps_iond():
         else:
                 print("Sorry version not yet supported.")
 
-choice = raw_input(" \n Type 'A' to install the QT wallet on your personal dekstop or laptop. \n \n Tpye 'B' to install the QT wallet on a low RAM VPS. \n \n Type 'C' to install the QT wallet on a Raspberry Pi or a Pine64. \n \n Type 'D' to install the ion.d service on your personal desktop or laptop. \n \n Type 'C' to install the ion.d service on a low RAM VPS. \n \n \n Type 'Q' to quit. \n \n \n ")
+choice = raw_input(" \n Type 'A' to install the QT wallet on your personal dekstop or laptop. \n \n Tpye 'B' to install the QT wallet on a low RAM VPS. \n \n Type 'C' to install the QT wallet on a Raspberry Pi or a Pine64. \n \n Type 'D' to install the ion.d service on your personal desktop or laptop. \n \n Type 'E' to install the ion.d service on a low RAM VPS. \n \n \n Type 'Q' to quit. \n \n \n ")
 
 if choice == 'A' or choice == 'a':
         print("\n Okay, installing QT wallet on your personal computer. \n")
@@ -143,7 +143,7 @@ elif choice == 'C' or choice == 'c':
 elif choice == 'D' or choice == 'd':
         print("\n Okay, installing the ion.d service on your computer. \n")
         iond()
-elif choice == 'D' or choice == 'd':
+elif choice == 'E' or choice == 'e':
         print("\n Okay, installing the ion.d service on your VPS. \n")
         vps_iond()
 elif choice == 'Q' or choice == 'q':
