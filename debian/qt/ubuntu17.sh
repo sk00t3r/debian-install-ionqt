@@ -71,7 +71,7 @@ sudo make
 clear
 echo "#### Chevking for existing iond install ####"
 echo " "
-if [ -f cd ~/.ionomy/"wallet.dat" ] && [ -f cd ~/.ionomy/"ion.conf"]
+if [ walllet.dat -f "~/.ionomy/"] && [ ion.conf -f "~/.ionomy/"]
 then
   clear
   echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
@@ -80,7 +80,7 @@ then
   sudo cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
   sudo mv ~/.ionomy/wallet.dat ~/.ionomy/
   sudo mv ~/.ionomy/ion.conf ~/.ionomy/
-elif [ -f cd ~/.ion/"wallet.dat" ] && [ -f cd ~/.ion/"ion.conf"]
+elif [ walllet.dat -f "~/.ion/"] && [ ion.conf -f "~/.ion/"]
   then
   clear
   echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
