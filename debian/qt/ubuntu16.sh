@@ -99,4 +99,4 @@ else
 fi
 echo "#### Starting Ion-QT Wallet ####"
 echo " "
-sudo ./ionx-qt
+sudo ./ionx-qt &
