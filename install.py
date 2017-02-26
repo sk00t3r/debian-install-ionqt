@@ -29,6 +29,11 @@ def qt():
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu14.sh", "ubuntu14.sh")
                 os.chmod('ubuntu14.sh', 0755)
                 subprocess.call("./ubuntu14.sh", shell=True)
+                
+        elif version == "17.04":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu17.sh", "ubuntu17.sh")
+                os.chmod('ubuntu17.sh', 0755)
+                subprocess.call("./ubuntu17.sh", shell=True)
         else:
                 print("Sorry version not yet supported.")
 
@@ -52,6 +57,11 @@ def vps():
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu14vps.sh", "ubuntu14vps.sh")
                 os.chmod('ubuntu14vps.sh', 0755)
                 subprocess.call("./ubuntu14vps.sh", shell=True)
+                
+        elif version == "17.04":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu17vps.sh", "ubuntu17vps.sh")
+                os.chmod('ubuntu17vps.sh', 0755)
+                subprocess.call("./ubuntu17vps.sh", shell=True)
         else:
                 print("Sorry version not yet supported.")
 
@@ -83,6 +93,11 @@ def iond():
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu14iond.sh", "ubuntu14iond.sh")
                 os.chmod('ubuntu14iond.sh', 0755)
                 subprocess.call("./ubuntu14iond.sh", shell=True)
+                
+        elif version == "17.04":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu17iond.sh", "ubuntu17iond.sh")
+                os.chmod('ubuntu17iond.sh', 0755)
+                subprocess.call("./ubuntu17iond.sh", shell=True)
         else:
                 print("Sorry version not yet supported.")
 
