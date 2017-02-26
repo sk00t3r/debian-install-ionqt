@@ -70,7 +70,7 @@ if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" 
   sudo make -f makefile.unix
   sudo mv ~/ion/src/xiond ~/ion/src/iond
   sudo chmod 755 ~/ion/src/iond
-  sudo mv ~/ion/src/iond /usr/bin
+  sudo mv ~/ion/src/iond /usr/local/bin
 elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   then
   clear
@@ -86,7 +86,7 @@ elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   sudo make -f makefile.unix
   sudo mv ~/ion/src/xiond ~/ion/src/iond
   sudo chmod 755 ~/ion/src/iond
-  sudo mv ~/ion/src/iond /usr/bin
+  sudo mv ~/ion/src/iond /usr/local/bin
 else
   clear
   echo "#### No Existing Wallet Found, Installing IOND Core ####"
@@ -95,7 +95,7 @@ else
   sudo make -f makefile.unix
   sudo mv ~/ion/src/xiond ~/ion/src/iond
   sudo chmod 755 ~/ion/src/iond
-  sudo mv ~/ion/src/iond /usr/bin
+  sudo mv ~/ion/src/iond /usr/local/bin
   cd ~/.ionomy/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
@@ -107,9 +107,9 @@ else
   sudo nano ion.conf
 fi
 clear
-echo "#### changing to /user/bin ####"
+echo "#### Changing to /usr/local/bin ####"
 echo " "
-cd /usr/bin
+cd /usr/local/bin
 echo "#### Would you like to start iond in print to console mode? [Y/n] ####"
 echo " "
 read console
@@ -120,18 +120,18 @@ if [ $console == "Y" ] || [ $console == "y" ]
 	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
-  	sudo ./iond --printtoconsole
+  	sudo iond --printtoconsole &
 elif [ $console == "N" ] || [ $console == "n" ]
 	then
   	clear
   	echo "#### Okay, starting iond in silent mode. ####"
-	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
+	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
-  	sudo ./iond
+  	sudo iond &
 else
   	clear
  	echo "#### Invalid choice selected, defaulting to silent mode. ####"
-	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
-	sudo ./iond
+	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
+	sudo iond &
 fi
