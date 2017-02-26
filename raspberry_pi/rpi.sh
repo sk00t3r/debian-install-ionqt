@@ -72,4 +72,4 @@ sudo qmake
 sudo make
 clear
 echo "#### Starting Ion-QT Wallet ####"
-sudo ./ionx-qt
+sudo ./ionx-qt &
