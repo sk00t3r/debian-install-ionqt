@@ -107,7 +107,7 @@ else
   sudo nano ion.conf
 fi
 clear
-echo "#### changing to /user/bin ####"
+echo "#### Changing to /usr/bin ####"
 echo " "
 cd /usr/local/bin
 echo "#### Would you like to start iond in print to console mode? [Y/n] ####"
