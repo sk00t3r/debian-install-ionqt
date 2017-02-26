@@ -85,3 +85,9 @@ else
   sudo nano ion.conf
 fi
 clear
+echo "#### changing to /user/bin ####"
+echo " "
+cd /user/bin
+echo "#### starting iond ####"
+echo " "
+sudo ./iond --printtoconsole
