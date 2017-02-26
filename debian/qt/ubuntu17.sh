@@ -81,6 +81,7 @@ then
   sudo mv ~/.ionomy/wallet.dat ~/.ionomy/
   sudo mv ~/.ionomy/ion.conf ~/.ionomy/
 elif [ -f "~/.ion/wallet.dat" ] && [ -f "~./ion/ion.conf"]
+  then
   clear
   echo "#### Backing up & Moving Old ION Wallet.dat & ion.conf ####"
   echo " "
