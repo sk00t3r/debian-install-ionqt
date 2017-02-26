@@ -25,3 +25,7 @@ sudo chmod 755 install.py
 sudo ./install.py
 
 Copy the ion.conf to the correct directory, (cd ~/.ionomy/) and edit the file to create a username and password.
+
+# Stopping iond:
+
+If you install the iond service only use "sudo pkill -9 iond" from another terminal window to stop the service.
