@@ -67,13 +67,19 @@ sudo mv ~/ion/src/xiond ~/ion/src/iond
 sudo chmod 755 ~/ion/src/iond
 sudo mv ~/ion/src/iond /usr/bin
 clear
-#echo "#### Creating ION folder ####"
-#echo " "
-#sudo mkdir ~/.ionomy/
-#clear
-#echo "#### Backing up & Moving Old ION Wallet.dat & ion.conf ####"
-#echo " "
-#sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-#sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-#sudo mv ~/.ion/wallet.dat ~/.ionomy/
-#sudo mv ~/.ion/ion.conf ~/.ionomy/
+echo "#### Creating ION folder ####"
+echo " "
+sudo mkdir ~/.ionomy/
+clear
+echo "#### Backing up & Moving Old ION Wallet.dat & ion.conf ####"
+echo " "
+sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+sudo mv ~/.ion/wallet.dat ~/.ionomy/
+sudo mv ~/.ion/ion.conf ~/.ionomy/
+echo "#### changing to /user/bin ####"
+echo " "
+cd /user/bin
+echo "#### starting iond ####"
+echo " "
+sudo ./iond --printtoconsole
