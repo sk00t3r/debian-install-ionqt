@@ -14,7 +14,7 @@ echo "#### Change to home directory ####"
 cd ~/
 clear
 echo "#### Creating Swap ####"
-sudo fallocate -l 2G /swapfile
+sudo fallocate -l 4G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
