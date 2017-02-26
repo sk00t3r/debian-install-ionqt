@@ -14,6 +14,14 @@ sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get update -y
 clear
+echo "#### Creating Swap ####"
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo swapon -s
+sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
+clear
 echo "#### Installing Dependencies ####"
 echo " "
 sudo apt-get install autoconf -y 
