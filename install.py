@@ -103,33 +103,33 @@ def iond():
                 
 def vps_iond():
         if version == "16.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/vps_iond/ubuntu16iond.sh", "ubuntu16iond.sh")
-                os.chmod('ubuntu16iond.sh', 0755)
-                subprocess.call("./ubuntu16iond.sh", shell=True)
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/vps_iond/ubuntu16vps_iond.sh", "ubuntu16vps_iond.sh")
+                os.chmod('ubuntu16vps_iond.sh', 0755)
+                subprocess.call("./ubuntu16vps_iond.sh", shell=True)
         
         elif version == "16.10":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/vps_iond/ubuntu16iond.sh", "ubuntu16iond.sh")
-                os.chmod('ubuntu16iond.sh', 0755)
-                subprocess.call("./ubuntu16iond.sh", shell=True)
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/vps_iond/ubuntu16vps_iond.sh", "ubuntu16vps_iond.sh")
+                os.chmod('ubuntu16vps_iond.sh', 0755)
+                subprocess.call("./ubuntu16vps_iond.sh", shell=True)
         
         elif version == "18.1":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/vps_iond/ubuntu16iond.sh", "ubuntu16iond.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/vps_iond/ubuntu16ivps_ond.sh", "ubuntu16vps_iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
-                subprocess.call("./ubuntu16iond.sh", shell=True)
+                subprocess.call("./ubuntu16vps_iond.sh", shell=True)
         
         elif version == "14.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/vps_iond/ubuntu14iond.sh", "ubuntu14iond.sh")
-                os.chmod('ubuntu14iond.sh', 0755)
-                subprocess.call("./ubuntu14iond.sh", shell=True)
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/vps_iond/ubuntu14vps_iond.sh", "ubuntu14vps_iond.sh")
+                os.chmod('ubuntu14vps_iond.sh', 0755)
+                subprocess.call("./ubuntu14vps_iond.sh", shell=True)
                 
         elif version == "17.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/vps_iond/ubuntu17iond.sh", "ubuntu17iond.sh")
-                os.chmod('ubuntu17iond.sh', 0755)
-                subprocess.call("./ubuntu17iond.sh", shell=True)
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/vps_iond/ubuntu17vps_iond.sh", "ubuntu17vps_iond.sh")
+                os.chmod('ubuntu17vps_iond.sh', 0755)
+                subprocess.call("./ubuntu17vps_iond.sh", shell=True)
         else:
                 print("Sorry version not yet supported.")
 
-choice = raw_input(" \n Type 'A' to install the QT wallet on your personal dekstop or laptop. \n \n Tpye 'B' to install the QT wallet on a low RAM VPS. \n \n Type 'C' to install the QT wallet on a Raspberry Pi or a Pine64. \n \n Type 'D' to install the ion.d service only. \n \n \n Type 'Q' to quit. \n \n \n ")
+choice = raw_input(" \n Type 'A' to install the QT wallet on your personal dekstop or laptop. \n \n Tpye 'B' to install the QT wallet on a low RAM VPS. \n \n Type 'C' to install the QT wallet on a Raspberry Pi or a Pine64. \n \n Type 'D' to install the ion.d service on your personal desktop or laptop. \n \n Type 'C' to install the ion.d service on a low RAM VPS. \n \n \n Type 'Q' to quit. \n \n \n ")
 
 if choice == 'A' or choice == 'a':
         print("\n Okay, installing QT wallet on your personal computer. \n")
