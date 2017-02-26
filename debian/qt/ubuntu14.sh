@@ -96,4 +96,4 @@ else
 fi
 clear
 echo "#### Starting Ion-QT Wallet ####"
-sudo ./ionx-qt
+sudo ./ionx-qt &
