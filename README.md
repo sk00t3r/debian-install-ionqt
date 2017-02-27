@@ -10,8 +10,6 @@ sudo apt-get install curl -y
 
 python <(curl "https://gist.githubusercontent.com/sk00t3r/ca93a8fb2e077770dc75e80df8aa6edf/raw/f339f7c9013ab1641f3eaa0b45fc7da5efd13d3b/install.py" -s -N)
 
-Copy the ion.conf to the correct directory, (cd ~/.ionomy/) and edit the file to create a username and password.
-
 # Alternative Automated Install:
 
 cd /opt
@@ -24,8 +22,6 @@ sudo chmod 755 install.py
 
 sudo ./install.py
 
-Copy the ion.conf to the correct directory, (cd ~/.ionomy/) and edit the file to create a username and password.
-
 # Stopping iond:
 
-If you install the iond service only use "sudo pkill -9 iond" from another terminal window to stop the service.
+If you install the iond service only use "sudo pkill -9 iond". If you start iond with the print to console command you will need to run the kill command from another terminal window to stop the service.
