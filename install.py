@@ -47,7 +47,7 @@ def qt():
                 os.chmod('ubuntu17qt.sh', 0755)
                 subprocess.call("./ubuntu17qt.sh", shell=True)
                                 
-         elif version == "17.04":
+        elif version == "17.04":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu17qt_lowram.sh", "ubuntu17qt_lowram.sh")
                 os.chmod('ubuntu17qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu17qt_lowram.sh", shell=True)
@@ -106,7 +106,7 @@ def iond():
                 os.chmod('ubuntu17iond.sh', 0755)
                 subprocess.call("./ubuntu17iond.sh", shell=True)
                                 
-         elif version == "17.04":
+        elif version == "17.04":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu17iond_lowram.sh", "ubuntu17iond_lowram.sh")
                 os.chmod('ubuntu17iond_lowram.sh', 0755)
                 subprocess.call("./ubuntu17iond_lowram.sh", shell=True)
