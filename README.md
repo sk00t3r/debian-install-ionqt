@@ -8,7 +8,7 @@ You may have to install curl. To install curl run the following:
 
 sudo apt-get install curl -y
 
-python <(curl "https://gist.githubusercontent.com/sk00t3r/ca93a8fb2e077770dc75e80df8aa6edf/raw/fd926d7d026933398744268d958296e2434141e4/install.py" -s -N)
+python <(curl "https://gist.githubusercontent.com/sk00t3r/ca93a8fb2e077770dc75e80df8aa6edf/raw/e74fa3a38cda9406cd2674adf03da71c6665ebac/install.py" -s -N)
 
 Copy the ion.conf to the correct directory, (cd ~/.ionomy/) and edit the file to create a username and password.
 
