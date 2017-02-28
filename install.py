@@ -20,7 +20,7 @@ def qt():
         elif version == "14.04":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu14qt_lowram.sh", "ubuntu14qt_lowram.sh")
                 os.chmod('ubuntu14qt_lowram.sh', 0755)
-                subprocess.call("./ubuntu14qt_lowram.sh", shell=Tru
+                subprocess.call("./ubuntu14qt_lowram.sh", shell=True)
         
         elif version == "16.04" and mem > 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
@@ -90,9 +90,19 @@ def iond():
         elif version == "14.04":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu14iond_lowram.sh", "ubuntu14iond_lowram.sh")
                 os.chmod('ubuntu14iond_lowram.sh', 0755)
-                subprocess.call("./ubuntu14iond_lowram.sh", shell=Tru
+                subprocess.call("./ubuntu14iond_lowram.sh", shell=True)
         
         elif version == "16.04" and mem > 4:
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
+                os.chmod('ubuntu16iond.sh', 0755)
+                subprocess.call("./ubuntu16iond.sh", shell=True)
+                              
+        elif version == "16.04":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond_lowram.sh", "ubuntu16iond_lowram.sh")
+                os.chmod('ubuntu16iond_lowram.sh', 0755)
+                subprocess.call("./ubuntu16iond_lowram.sh", shell=True)
+                                
+        elif version == "16.10" and mem > 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
                 subprocess.call("./ubuntu16iond.sh", shell=True)
@@ -101,7 +111,17 @@ def iond():
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond_lowram.sh", "ubuntu16iond_lowram.sh")
                 os.chmod('ubuntu16iond_lowram.sh', 0755)
                 subprocess.call("./ubuntu16iond_lowram.sh", shell=True)
-                
+        
+        elif version == "17.04" and mem > 4:
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu17iond.sh", "ubuntu17iond.sh")
+                os.chmod('ubuntu17iond.sh', 0755)
+                subprocess.call("./ubuntu17iond.sh", shell=True)
+                                
+        elif version == "17.04":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu17iond_lowram.sh", "ubuntu17iond_lowram.sh")
+                os.chmod('ubuntu17iond_lowram.sh', 0755)
+                subprocess.call("./ubuntu17iond_lowram.sh", shell=True)                        
+        
         elif version == "18.1" and mem > 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
@@ -111,16 +131,7 @@ def iond():
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond_lowram.sh", "ubuntu16iond_lowram.sh")
                 os.chmod('ubuntu16iod_lowram.sh', 0755)
                 subprocess.call("./ubuntu16iond_lowram.sh", shell=True)
-                
-        elif version == "17.04" and mem > 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu17iond.sh", "ubuntu17iond.sh")
-                os.chmod('ubuntu17iond.sh', 0755)
-                subprocess.call("./ubuntu17iond.sh", shell=True)
-                                
-        elif version == "17.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu17iond_lowram.sh", "ubuntu17iond_lowram.sh")
-                os.chmod('ubuntu17iond_lowram.sh', 0755)
-                subprocess.call("./ubuntu17iond_lowram.sh", shell=True)
+           
         else:
                 print("Sorry version not yet supported.")
                 
