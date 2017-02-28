@@ -12,7 +12,7 @@ mem_bytes = os.sysconf('SC_PAGE_SIZE') * os.sysconf('SC_PHYS_PAGES')
 mem = mem_bytes/(1024.**3)
 
 def qt():
-        if version == "14.04" and mem > 4:
+        if version == "14.04" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu14qt.sh", "ubuntu14qt.sh")
                 os.chmod('ubuntu14qt.sh', 0755)
                 subprocess.call("./ubuntu14qt.sh", shell=True)
@@ -22,7 +22,7 @@ def qt():
                 os.chmod('ubuntu14qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu14qt_lowram.sh", shell=True)
         
-        elif version == "16.04" and mem > 4:
+        elif version == "16.04" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
                 subprocess.call("./ubuntu16qt.sh", shell=True)
@@ -32,7 +32,7 @@ def qt():
                 os.chmod('ubuntu16qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu16qt_lowram.sh", shell=True)
                                 
-        elif version == "16.10" and mem > 4:
+        elif version == "16.10" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
                 subprocess.call("./ubuntu16qt.sh", shell=True)
@@ -42,7 +42,7 @@ def qt():
                 os.chmod('ubuntu16qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu16qt_lowram.sh", shell=True)
         
-        elif version == "17.04" and mem > 4:
+        elif version == "17.04" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu17qt.sh", "ubuntu17qt.sh")
                 os.chmod('ubuntu17qt.sh', 0755)
                 subprocess.call("./ubuntu17qt.sh", shell=True)
@@ -52,7 +52,7 @@ def qt():
                 os.chmod('ubuntu17qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu17qt_lowram.sh", shell=True)        
                                 
-        elif version == "18.1" and mem > 4:
+        elif version == "18.1" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
                 subprocess.call("./ubuntu16qt.sh", shell=True)
@@ -82,7 +82,7 @@ def arm_iond():
                 print("Sorry version not yet supported.")
                 
 def iond():
-        if version == "14.04" and mem > 4:
+        if version == "14.04" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu14iond.sh", "ubuntu14iond.sh")
                 os.chmod('ubuntu14iond.sh', 0755)
                 subprocess.call("./ubuntu14iond.sh", shell=True)
@@ -92,7 +92,7 @@ def iond():
                 os.chmod('ubuntu14iond_lowram.sh', 0755)
                 subprocess.call("./ubuntu14iond_lowram.sh", shell=True)
         
-        elif version == "16.04" and mem > 4:
+        elif version == "16.04" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
                 subprocess.call("./ubuntu16iond.sh", shell=True)
@@ -102,7 +102,7 @@ def iond():
                 os.chmod('ubuntu16iond_lowram.sh', 0755)
                 subprocess.call("./ubuntu16iond_lowram.sh", shell=True)
                                 
-        elif version == "16.10" and mem > 4:
+        elif version == "16.10" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
                 subprocess.call("./ubuntu16iond.sh", shell=True)
@@ -112,7 +112,7 @@ def iond():
                 os.chmod('ubuntu16iond_lowram.sh', 0755)
                 subprocess.call("./ubuntu16iond_lowram.sh", shell=True)
         
-        elif version == "17.04" and mem > 4:
+        elif version == "17.04" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu17iond.sh", "ubuntu17iond.sh")
                 os.chmod('ubuntu17iond.sh', 0755)
                 subprocess.call("./ubuntu17iond.sh", shell=True)
@@ -122,7 +122,7 @@ def iond():
                 os.chmod('ubuntu17iond_lowram.sh', 0755)
                 subprocess.call("./ubuntu17iond_lowram.sh", shell=True)                        
         
-        elif version == "18.1" and mem > 4:
+        elif version == "18.1" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
                 subprocess.call("./ubuntu16iond.sh", shell=True)
