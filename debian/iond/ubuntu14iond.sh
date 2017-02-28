@@ -122,8 +122,6 @@ elif [ $console == "N" ] || [ $console == "n" ]
   	clear
   	echo "#### Okay, starting iond in silent mode. ####"
 	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
-  	echo " "
-	read -p "#### Press any key when you are ready to continue ####"
   	sudo iond &
 else
   	clear
