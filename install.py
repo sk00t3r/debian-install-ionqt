@@ -30,7 +30,7 @@ def qt():
         elif version == "16.04":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt_lowram.sh", "ubuntu16qt_lowram.sh")
                 os.chmod('ubuntu16qt_lowram.sh', 0755)
-                subprocess.call("./ubuntu16qt_lowram.sh", shell=True
+                subprocess.call("./ubuntu16qt_lowram.sh", shell=True)
                                 
         elif version == "16.10" and mem > 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
