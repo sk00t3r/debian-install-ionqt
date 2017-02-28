@@ -135,7 +135,7 @@ def iond():
         else:
                 print("Sorry version not yet supported.")
                 
-choice = raw_input(" \n Type 'A' to install the ion QT wallet. \n \n Type 'B' to install the ion.d service. \n \n Type 'C' to install the QT wallet on your ARM devise. \n \n Type 'D' to install the ion.d service on your ARM devise. \n \n \n Type 'Q' to quit. \n \n \n ")
+choice = raw_input(" \n Type 'A' to install the ion QT wallet. \n \n Type 'B' to install the ion.d service. \n \n Type 'C' to install the QT wallet on your ARM (rpi/pine64) device. \n \n Type 'D' to install the ion.d service on your ARM (rpi/pine64) device. \n \n \n Type 'Q' to quit. \n \n \n ")
 
 if choice == 'A' or choice == 'a':
         print("\n Okay, installing ion QT wallet. \n")
