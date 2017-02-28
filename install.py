@@ -26,12 +26,32 @@ def qt():
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
                 subprocess.call("./ubuntu16qt.sh", shell=True)
+                                
+        elif version == "16.04":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt_lowram.sh", "ubuntu16qt_lowram.sh")
+                os.chmod('ubuntu16qt_lowram.sh', 0755)
+                subprocess.call("./ubuntu16qt_lowram.sh", shell=True
+                                
+        elif version == "16.10" and mem > 4:
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
+                os.chmod('ubuntu16qt.sh', 0755)
+                subprocess.call("./ubuntu16qt.sh", shell=True)
 
         elif version == "16.10":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt_lowram.sh", "ubuntu16qt_lowram.sh")
                 os.chmod('ubuntu16qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu16qt_lowram.sh", shell=True)
-                
+        
+        elif version == "17.04" and mem > 4:
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu17qt.sh", "ubuntu17qt.sh")
+                os.chmod('ubuntu17qt.sh', 0755)
+                subprocess.call("./ubuntu17qt.sh", shell=True)
+                                
+        elif version == "17.04":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu17qt_lowram.sh", "ubuntu17qt_lowram.sh")
+                os.chmod('ubuntu17qt_lowram.sh', 0755)
+                subprocess.call("./ubuntu17qt_lowram.sh", shell=True)        
+                                
         elif version == "18.1" and mem > 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
@@ -41,16 +61,7 @@ def qt():
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu16qt_lowram.sh", "ubuntu16qt_lowram.sh")
                 os.chmod('ubuntu16qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu16qt_lowram.sh", shell=True)
-                
-        elif version == "17.04" and mem > 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu17qt.sh", "ubuntu17qt.sh")
-                os.chmod('ubuntu17qt.sh', 0755)
-                subprocess.call("./ubuntu17qt.sh", shell=True)
-                                
-        elif version == "17.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/debian/qt/ubuntu17qt_lowram.sh", "ubuntu17qt_lowram.sh")
-                os.chmod('ubuntu17qt_lowram.sh', 0755)
-                subprocess.call("./ubuntu17qt_lowram.sh", shell=True)
+        
         else:
                 print("Sorry version not yet supported.")
                                 
