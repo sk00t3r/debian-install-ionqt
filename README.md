@@ -38,4 +38,4 @@ Select option 1
 
 # Stopping iond:
 
-If you install the iond service only use "sudo pkill -9 iond". If you started it with teh "printtoconsole" command you need to run teh kill command from another terminal window to stop the service.
+If you install the iond service only use "sudo pkill -9 iond". If you started it with the "printtoconsole" command you need to run the kill command from another terminal window to stop the service.
