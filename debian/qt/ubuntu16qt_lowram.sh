@@ -4,15 +4,18 @@ echo "#### Changing to home directory ####"
 cd ~
 clear
 echo "#### Installing Sudo ####"
+echo " "
 apt-get install sudo -y
 clear
 echo "#### Updating Ubuntu/Debian ####"
+echo " "
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get update -y
 clear
 echo "#### Creating Swap ####"
+echo " "
 sudo fallocate -l 4G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
@@ -21,6 +24,7 @@ sudo swapon -s
 sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
 clear
 echo "#### Installing Dependencies ####"
+echo " "
 sudo apt-get install autoconf -y 
 sudo apt-get install autogen -y
 sudo apt-get install automake -y
@@ -62,12 +66,15 @@ sudo apt-get install libminiupnpc-dev -y
 sudo apt-get install zip -y
 clear
 echo "#### Cloning Repo ####"
+echo " "
 git clone https://github.com/ionomy/ion
 clear
 echo "#### Changing To The Ion-Core Directory ####"
+echo " "
 cd ion/
 clear
 echo "#### Making ####"
+echo " "
 sudo qmake
 sudo make
 clear
@@ -101,4 +108,5 @@ else
 fi
 clear
 echo "#### Starting Ion-QT Wallet ####"
+echo " "
 sudo ./ionx-qt &
