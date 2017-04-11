@@ -13,52 +13,52 @@ mem = mem_bytes/(1024.**3)
 
 def qt():
         if version == "14.04" and mem >= 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/qt/ubuntu14qt.sh", "ubuntu14qt.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu14qt.sh", "ubuntu14qt.sh")
                 os.chmod('ubuntu14qt.sh', 0755)
                 subprocess.call("./ubuntu14qt.sh", shell=True)
                 
         elif version == "14.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/qt/ubuntu14qt_lowram.sh", "ubuntu14qt_lowram.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu14qt_lowram.sh", "ubuntu14qt_lowram.sh")
                 os.chmod('ubuntu14qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu14qt_lowram.sh", shell=True)
         
         elif version == "16.04" and mem >= 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
                 subprocess.call("./ubuntu16qt.sh", shell=True)
                                 
         elif version == "16.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/qt/ubuntu16qt_lowram.sh", "ubuntu16qt_lowram.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu16qt_lowram.sh", "ubuntu16qt_lowram.sh")
                 os.chmod('ubuntu16qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu16qt_lowram.sh", shell=True)
                                 
         elif version == "16.10" and mem >= 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
                 subprocess.call("./ubuntu16qt.sh", shell=True)
 
         elif version == "16.10":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/qt/ubuntu16qt_lowram.sh", "ubuntu16qt_lowram.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu16qt_lowram.sh", "ubuntu16qt_lowram.sh")
                 os.chmod('ubuntu16qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu16qt_lowram.sh", shell=True)
         
         elif version == "17.04" and mem >= 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/qt/ubuntu17qt.sh", "ubuntu17qt.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu17qt.sh", "ubuntu17qt.sh")
                 os.chmod('ubuntu17qt.sh', 0755)
                 subprocess.call("./ubuntu17qt.sh", shell=True)
                                 
         elif version == "17.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/qt/ubuntu17qt_lowram.sh", "ubuntu17qt_lowram.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu17qt_lowram.sh", "ubuntu17qt_lowram.sh")
                 os.chmod('ubuntu17qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu17qt_lowram.sh", shell=True)        
                                 
         elif version == "18.1" and mem >= 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
                 subprocess.call("./ubuntu16qt.sh", shell=True)
                 
         elif version == "18.1":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/qt/ubuntu16qt_lowram.sh", "ubuntu16qt_lowram.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu16qt_lowram.sh", "ubuntu16qt_lowram.sh")
                 os.chmod('ubuntu16qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu16qt_lowram.sh", shell=True)
         
@@ -67,7 +67,7 @@ def qt():
                                 
 def arm_qt():
         if version == "8.0":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/raspberry_pi/rpi_qt.sh", "rpi_qt.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/raspberry_pi/rpi_qt.sh", "rpi_qt.sh")
                 os.chmod('rpi_qt.sh', 0755)
                 subprocess.call("./rpi_qt.sh", shell=True)
         else:
@@ -75,7 +75,7 @@ def arm_qt():
 
 def arm_iond():
         if version == "8.0":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/raspberry_pi/rpi_iond.sh", "rpi_iond.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/raspberry_pi/rpi_iond.sh", "rpi_iond.sh")
                 os.chmod('rpi_iond.sh', 0755)
                 subprocess.call("./rpi_iond.sh", shell=True)
         else:
@@ -83,52 +83,52 @@ def arm_iond():
                 
 def iond():
         if version == "14.04" and mem >= 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/iond/ubuntu14iond.sh", "ubuntu14iond.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/iond/ubuntu14iond.sh", "ubuntu14iond.sh")
                 os.chmod('ubuntu14iond.sh', 0755)
                 subprocess.call("./ubuntu14iond.sh", shell=True)
                 
         elif version == "14.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/iond/ubuntu14iond_lowram.sh", "ubuntu14iond_lowram.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/iond/ubuntu14iond_lowram.sh", "ubuntu14iond_lowram.sh")
                 os.chmod('ubuntu14iond_lowram.sh', 0755)
                 subprocess.call("./ubuntu14iond_lowram.sh", shell=True)
         
         elif version == "16.04" and mem >= 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
                 subprocess.call("./ubuntu16iond.sh", shell=True)
                               
         elif version == "16.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/iond/ubuntu16iond_lowram.sh", "ubuntu16iond_lowram.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/iond/ubuntu16iond_lowram.sh", "ubuntu16iond_lowram.sh")
                 os.chmod('ubuntu16iond_lowram.sh', 0755)
                 subprocess.call("./ubuntu16iond_lowram.sh", shell=True)
                                 
         elif version == "16.10" and mem >= 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
                 subprocess.call("./ubuntu16iond.sh", shell=True)
 
         elif version == "16.10":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/iond/ubuntu16iond_lowram.sh", "ubuntu16iond_lowram.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/iond/ubuntu16iond_lowram.sh", "ubuntu16iond_lowram.sh")
                 os.chmod('ubuntu16iond_lowram.sh', 0755)
                 subprocess.call("./ubuntu16iond_lowram.sh", shell=True)
         
         elif version == "17.04" and mem >= 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/iond/ubuntu17iond.sh", "ubuntu17iond.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/iond/ubuntu17iond.sh", "ubuntu17iond.sh")
                 os.chmod('ubuntu17iond.sh', 0755)
                 subprocess.call("./ubuntu17iond.sh", shell=True)
                                 
         elif version == "17.04":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/iond/ubuntu17iond_lowram.sh", "ubuntu17iond_lowram.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/iond/ubuntu17iond_lowram.sh", "ubuntu17iond_lowram.sh")
                 os.chmod('ubuntu17iond_lowram.sh', 0755)
                 subprocess.call("./ubuntu17iond_lowram.sh", shell=True)                        
         
         elif version == "18.1" and mem >= 4:
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/iond/ubuntu16iond.sh", "ubuntu16iond.sh")
                 os.chmod('ubuntu16iond.sh', 0755)
                 subprocess.call("./ubuntu16iond.sh", shell=True)
                 
         elif version == "18.1":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/debian/iond/ubuntu16iond_lowram.sh", "ubuntu16iond_lowram.sh")
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/iond/ubuntu16iond_lowram.sh", "ubuntu16iond_lowram.sh")
                 os.chmod('ubuntu16iod_lowram.sh', 0755)
                 subprocess.call("./ubuntu16iond_lowram.sh", shell=True)
            
