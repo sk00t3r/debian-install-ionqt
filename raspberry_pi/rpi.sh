@@ -62,7 +62,7 @@ sudo apt-get install libminiupnpc-dev -y
 sudo apt-get install zip -y
 clear
 echo "#### Cloning Repo ####"
-git clone https://github.com/ionomy/ion
+git clone https://github.com/sk00t3r/linux-ion.git
 clear
 echo "#### Changing To The Ion-Core Directory ####"
 cd ion/
