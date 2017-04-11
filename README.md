@@ -10,8 +10,6 @@ sudo apt-get install curl -y
 
 python <(curl "https://gist.githubusercontent.com/sk00t3r/ca93a8fb2e077770dc75e80df8aa6edf/raw/0c907d1747cecbe9c521bc01a23e5751caca0827/install.py" -s -N)
 
-Copy the ion.conf to the correct directory, (cd ~/.ionomy/) and edit the file to create a username and password.
-
 # Alternative Automated Install:
 
 cd /opt
