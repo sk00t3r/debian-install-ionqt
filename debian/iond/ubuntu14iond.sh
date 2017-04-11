@@ -45,7 +45,7 @@ sudo apt-get ugrade -y
 clear
 echo "#### Downloading IOND Core ####"
 echo " "
-git clone https://github.com/ionomy/ion
+git clone https://github.com/ionomy/ion-testnet
 clear
 echo "#### Creating ION folder ####"
 echo " "
