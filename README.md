@@ -16,7 +16,7 @@ cd /opt
 
 sudo apt-get install git -y
 
-sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/installtestnet.py
+sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/installtestnet.py
 
 sudo chmod 755 install.py
 
