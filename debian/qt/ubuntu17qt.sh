@@ -58,7 +58,7 @@ sudo apt-get install zip -y
 clear
 echo "#### Cloning Repo ####"
 echo " "
-git clone https://github.com/ionomy/ion
+git clone https://github.com/ionomy/ion-testnet
 clear
 echo "#### Changing To The Ion-Core Directory ####"
 echo " "
@@ -96,9 +96,9 @@ else
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
   Echo " "
-  sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/ion.conf
+  sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf
   sudo nano ion.conf
 fi
 echo "#### Starting Ion-QT Wallet ####"
 echo " "
-sudo ./ionx-qt &
+sudo ./xion-qt -testnet &
