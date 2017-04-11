@@ -107,7 +107,7 @@ else
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
   Echo " "
-  sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/master/ion.conf -O ion.conf
+  sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/ion.conf -O ion.conf
   sudo nano ion.conf
 fi
 clear
