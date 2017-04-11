@@ -8,7 +8,7 @@ You may have to install curl. To install curl run the following:
 
 sudo apt-get install curl -y
 
-python <(curl "https://gist.githubusercontent.com/sk00t3r/85b8943d9834f60fd5ae0ef3d0a80f3b/raw/167bb8e72ca9eb2b248c2eb6a361288c5d5baed1/installtestnet.py" -s -N)
+python <(curl "https://gist.githubusercontent.com/sk00t3r/85b8943d9834f60fd5ae0ef3d0a80f3b/raw/8c54815adf9f26fa71b9991ccc204d654fe3aba2/installtestnet.py" -s -N)
 
 # Alternative TestNet Automated Install:
 
