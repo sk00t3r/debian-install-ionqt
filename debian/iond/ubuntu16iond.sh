@@ -126,18 +126,16 @@ if [ $console == "Y" ] || [ $console == "y" ]
 	echo "#### Open a new teminal session and type" "sudo pkill -9 xiond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
-  	sudo xiond --printtoconsole
+  	echo | sudo xiond --printtoconsole
 elif [ $console == "N" ] || [ $console == "n" ]
 	then
   	clear
   	echo "#### Okay, starting test net xiond in silent mode. ####"
 	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
-  	sudo xiond &
-	echo -ne '\n'
+  	echo | sudo xiond
 else
   	clear
  	echo "#### Invalid choice selected, defaulting to silent mode. ####"
 	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
-	sudo xiond &
-	echo -ne '\n'
+	echo | sudo xiond
 fi
