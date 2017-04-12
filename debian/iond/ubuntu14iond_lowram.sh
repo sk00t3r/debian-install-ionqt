@@ -114,7 +114,7 @@ clear
 echo "#### Changing to /usr/local/bin ####"
 echo " "
 cd /usr/local/bin
-echo "#### Would you like to start iond in print to console mode? [Y/n] ####"
+echo "#### Would you like to start iond in print to console mode? Generally you want to select no. [Y/n] ####"
 echo " "
 read console
 if [ $console == "Y" ] || [ $console == "y" ]
