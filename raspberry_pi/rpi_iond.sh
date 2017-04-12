@@ -57,7 +57,7 @@ sudo apt-get install zip -y
 clear
 echo "#### Downloading IOND Core ####"
 echo " "
-git clone https://github.com/ionomy/ion
+git clone https://github.com/ionomy/ion-testnet
 clear
 echo "#### Creating ION folder ####"
 echo " "
@@ -74,11 +74,11 @@ if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" 
   sudo cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
   echo "#### Installing IOND Core ####"
   echo " "
-  cd ion/src
+  cd ion-testnet/src
   sudo make -f makefile.unix
-  sudo mv ~/ion/src/xiond ~/ion/src/iond
-  sudo chmod 755 ~/ion/src/iond
-  sudo mv ~/ion/src/iond /usr/local/bin
+  sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
+  sudo chmod 755 ~/ion-testnet/src/iond
+  sudo mv ~/ion-testnet/src/iond /usr/local/bin
 elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   then
   clear
@@ -90,20 +90,20 @@ elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   sudo mv ~/.ion/ion.conf ~/.ionomy/
   echo "#### Installing IOND Core ####"
   echo " "
-  cd ion/src
+  cd ion-testnet/src
   sudo make -f makefile.unix
-  sudo mv ~/ion/src/xiond ~/ion/src/iond
-  sudo chmod 755 ~/ion/src/iond
-  sudo mv ~/ion/src/iond /usr/local/bin
+  sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
+  sudo chmod 755 ~/ion-testnet/src/iond
+  sudo mv ~/ion-testnet/src/iond /usr/local/bin
 else
   clear
   echo "#### No Existing Wallet Found, Installing IOND Core ####"
   echo " "
-  cd ion/src
+  cd ion-testnet/src
   sudo make -f makefile.unix
-  sudo mv ~/ion/src/xiond ~/ion/src/iond
-  sudo chmod 755 ~/ion/src/iond
-  sudo mv ~/ion/src/iond /usr/local/bin
+  sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
+  sudo chmod 755 ~/ion-testnet/src/iond
+  sudo mv ~/ion-testnet/src/iond /usr/local/bin
   cd ~/.ionomy/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
