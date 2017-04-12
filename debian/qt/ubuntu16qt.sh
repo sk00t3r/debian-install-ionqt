@@ -71,7 +71,6 @@ sudo make
 clear
 echo "#### Checking for an existing testnet ion qt install ####"
 echo " "
-sudo su
 if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/testnet/ion.conf)" ]
 then
   clear
