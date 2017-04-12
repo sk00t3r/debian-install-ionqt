@@ -57,10 +57,10 @@ sudo apt-get install libminiupnpc-dev -y
 sudo apt-get install zip -y
 clear
 echo "#### Cloning Repo ####"
-git clone https://github.com/ionomy/ion
+git clone https://github.com/ionomy/ion-testnet
 clear
 echo "#### Changing To The Ion-Core Directory ####"
-cd ion/
+cd ion-testnet/
 clear
 echo "#### Making ####"
 sudo qmake
@@ -93,7 +93,8 @@ else
   Echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/ion.conf
   sudo nano ion.conf
+  sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
 fi
 clear
 echo "#### Starting Ion-QT Wallet ####"
-sudo ./ionx-qt &
+sudo ./ionx-qt -testnet
