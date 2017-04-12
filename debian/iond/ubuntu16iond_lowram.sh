@@ -47,7 +47,7 @@ sudo apt-get install python-software-properties -y
 sudo apt-get install git -y 
 sudo apt-get install build-essential -y
 sudo apt-get install libtool -y 
-sudp apt-get install autotools-dev -y
+sudo apt-get install autotools-dev -y
 sudo apt-get install autoconf -y
 sudo apt-get install pkg-config -y
 sudo apt-get install libssl-dev -y
