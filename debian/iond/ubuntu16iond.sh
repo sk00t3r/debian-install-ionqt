@@ -82,7 +82,7 @@ elif [ -n "$(ls -A ~/.ion-testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.con
   sudo mv ~/.ion/ion.conf ~/.ionomy/
   echo "#### Installing IOND Core ####"
   echo " "
-  cd ion/src
+  cd ion-testnet/src
   sudo make -f makefile.unix
   sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
   sudo chmod 755 ~/ion-testnet/src/iond
@@ -91,7 +91,7 @@ else
   clear
   echo "#### No Existing Wallet Found, Installing IOND Core ####"
   echo " "
-  cd ion/src
+  cd ion-test/src
   sudo make -f makefile.unix
   sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
   sudo chmod 755 ~/ion-testnet/src/iond
