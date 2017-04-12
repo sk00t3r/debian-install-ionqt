@@ -69,24 +69,24 @@ echo " "
 sudo qmake
 sudo make
 clear
-echo "#### Chevking for existing iond install ####"
+echo "#### Checking for an existing testnet ion qt install ####"
 echo " "
-if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" ]
+if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/testnet/ion.conf)" ]
 then
   clear
   echo "#### Backing up original ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
-  sudo cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
-elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
-  then
-  clear
-  echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
-  echo " "
-  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-  sudo mv ~/.ion/wallet.dat ~/.ionomy/
-  sudo mv ~/.ion/ion.conf ~/.ionomy/
+  sudo cp -p -f -r ~/.ionomy/testnet/wallet.dat ~/.ionomy/testnet/wallet.dat.backup
+  sudo cp -p -f -r ~/.ionomy/testnet/ion.conf ~/.ionomy/testnet/ion.conf.backup
+#elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
+  #then
+  #clear
+  #echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
+  #echo " "
+  #sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+  #sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+  #sudo mv ~/.ion/wallet.dat ~/.ionomy/
+  #sudo mv ~/.ion/ion.conf ~/.ionomy/
 else
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
