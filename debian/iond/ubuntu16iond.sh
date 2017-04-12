@@ -133,9 +133,11 @@ elif [ $console == "N" ] || [ $console == "n" ]
   	echo "#### Okay, starting test net xiond in silent mode. ####"
 	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
   	sudo xiond &
+	echo -ne '\n'
 else
   	clear
  	echo "#### Invalid choice selected, defaulting to silent mode. ####"
 	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
 	sudo xiond &
+	echo -ne '\n'
 fi
