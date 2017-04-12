@@ -116,7 +116,7 @@ clear
 echo "#### Changing to /usr/local/bin ####"
 echo " "
 cd /usr/local/bin
-echo "#### Would you like to start iond in print to console mode? Generally you want No. [Y/n] ####"
+echo "#### Would you like to start testnet xiond in print to console mode? Generally you want No. [Y/n] ####"
 echo " "
 read console
 if [ $console == "Y" ] || [ $console == "y" ]
@@ -130,7 +130,7 @@ if [ $console == "Y" ] || [ $console == "y" ]
 elif [ $console == "N" ] || [ $console == "n" ]
 	then
   	clear
-  	echo "#### Okay, starting iond in silent mode. ####"
+  	echo "#### Okay, starting test net xiond in silent mode. ####"
 	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
   	sudo xiond &
 else
