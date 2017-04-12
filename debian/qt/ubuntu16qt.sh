@@ -62,7 +62,7 @@ git clone https://github.com/ionomy/ion-testnet
 clear
 echo "#### Changing To The Ion-Core Directory ####"
 echo " "
-cd ion/
+cd ion-testnet/
 clear
 echo "#### Making ####"
 echo " "
