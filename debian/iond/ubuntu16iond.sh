@@ -95,7 +95,7 @@ else
   sudo make -f makefile.unix
   sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
   sudo chmod 755 ~/ion-testnet/src/iond
-  sudo mv ~/iontestnet/src/iond /usr/local/bin
+  sudo mv ~/ion-testnet/src/iond /usr/local/bin
   cd ~/.ionomy/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
