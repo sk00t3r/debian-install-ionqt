@@ -55,22 +55,24 @@ echo "#### Creating ION folder ####"
 echo " "
 sudo mkdir ~/.ionomy/
 clear
-echo "#### Checking for existing iond install ####"
+echo "#### Checking for an existing testnet iond install ####"
 echo " "
-if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" ]
+if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/testnet/ion.conf)" ]
   then
   clear
   echo "#### Backing up original ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
-  sudo cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
+  sudo cp -p -f -r ~/.ionomy/testnet/wallet.dat ~/.ionomy/testnet/wallet.dat.backup
+  sudo cp -p -f -r ~/.ionomy/testnet/ion.conf ~/.ionomy/testnet/ion.conf.backup
   echo "#### Installing IOND Core ####"
   echo " "
   cd ion-testnet/src
   sudo make -f makefile.unix
-  sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
-  sudo chmod 755 ~/ion-testnet/src/iond
-  sudo mv ~/ion-testnet/src/iond /usr/local/bin
+  #sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
+  #sudo chmod 755 ~/ion-testnet/src/iond
+  sudo chmod 755 ~/ion-testnet/src/xiond
+  #sudo mv ~/ion-testnet/src/iond /usr/local/bin
+  sudo mv ~/ion-testnet/src/xiond /usr/local/bin
 elif [ -n "$(ls -A ~/.ion-testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   then
   clear
@@ -84,18 +86,22 @@ elif [ -n "$(ls -A ~/.ion-testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.con
   echo " "
   cd ion-testnet/src
   sudo make -f makefile.unix
-  sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
-  sudo chmod 755 ~/ion-testnet/src/iond
-  sudo mv ~/ion-testnet/src/iond /usr/local/bin
+  #sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
+  #sudo chmod 755 ~/ion-testnet/src/iond
+  sudo chmod 755 ~/ion-testnet/src/xiond
+  #sudo mv ~/ion-testnet/src/iond /usr/local/bin
+  sudo mv ~/ion-testnet/src/xiond /usr/local/bin
 else
   clear
-  echo "#### No Existing Wallet Found, Installing IOND Core ####"
+  echo "#### No Existing Wallet Found, Installing TestNet IOND Core ####"
   echo " "
   cd ion-testnet/src
   sudo make -f makefile.unix
-  sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
-  sudo chmod 755 ~/ion-testnet/src/iond
-  sudo mv ~/ion-testnet/src/iond /usr/local/bin
+  #sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
+  #sudo chmod 755 ~/ion-testnet/src/iond
+  sudo chmod 755 ~/ion-testnet/src/xiond
+  #sudo mv ~/ion-testnet/src/iond /usr/local/bin
+  sudo mv ~/ion-testnet/src/xiond /usr/local/bin
   cd ~/.ionomy/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
@@ -110,26 +116,26 @@ clear
 echo "#### Changing to /usr/local/bin ####"
 echo " "
 cd /usr/local/bin
-echo "#### Would you like to start iond in print to console mode? [Y/n] ####"
+echo "#### Would you like to start iond in print to console mode? Generally you want No. [Y/n] ####"
 echo " "
 read console
 if [ $console == "Y" ] || [ $console == "y" ]
   	then
   	clear
   	echo "#### Okay, starting in print to console mode. ####" 
-	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
+	echo "#### Open a new teminal session and type" "sudo pkill -9 xiond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
-  	sudo iond --printtoconsole
+  	sudo xiond --printtoconsole
 elif [ $console == "N" ] || [ $console == "n" ]
 	then
   	clear
   	echo "#### Okay, starting iond in silent mode. ####"
-	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
-  	sudo iond &
+	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
+  	sudo xiond &
 else
   	clear
  	echo "#### Invalid choice selected, defaulting to silent mode. ####"
-	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
-	sudo iond &
+	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
+	sudo xiond &
 fi
