@@ -91,7 +91,7 @@ else
   clear
   echo "#### No Existing Wallet Found, Installing IOND Core ####"
   echo " "
-  cd ion-test/src
+  cd ion-testnet/src
   sudo make -f makefile.unix
   sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
   sudo chmod 755 ~/ion-testnet/src/iond
