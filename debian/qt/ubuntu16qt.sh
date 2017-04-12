@@ -100,4 +100,4 @@ else
 fi
 echo "#### Starting TestNet Ion-QT Wallet ####"
 echo " "
-sudo ./ionx-qt -testnet
+sudo ./ionx-qt -testnet &>/dev/null
