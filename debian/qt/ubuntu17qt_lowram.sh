@@ -67,7 +67,7 @@ sudo apt-get install zip -y
 clear
 echo "#### Cloning Repo ####"
 echo " "
-git clone https://github.com/ionomy/ion
+git clone https://github.com/ionomy/ion-testnet
 clear
 echo "#### Changing To The Ion-Core Directory ####"
 echo " "
