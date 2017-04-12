@@ -71,7 +71,7 @@ git clone https://github.com/ionomy/ion
 clear
 echo "#### Changing To The Ion-Core Directory ####"
 echo " "
-cd ion/
+cd ion-testnet/
 clear
 echo "#### Making ####"
 echo " "
@@ -105,8 +105,9 @@ else
   Echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/ion.conf
   sudo nano ion.conf
+  sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
 fi
 clear
 echo "#### Starting Ion-QT Wallet ####"
 echo " "
-sudo ./ionx-qt &
+sudo ./ionx-qt -testnet
