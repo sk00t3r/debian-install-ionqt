@@ -110,7 +110,7 @@ clear
 echo "#### Changing to /usr/local/bin ####"
 echo " "
 cd /usr/local/bin
-echo "#### Would you like to start iond in print to console mode? [Y/n] ####"
+echo "#### Would you like to start iond in print to console mode? Generally you want to select no. [Y/n] ####"
 echo " "
 read console
 if [ $console == "Y" ] || [ $console == "y" ]
@@ -120,16 +120,16 @@ if [ $console == "Y" ] || [ $console == "y" ]
 	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
-  	sudo iond --printtoconsole
+  	sudo iond --printtoconsole &>/dev/null
 elif [ $console == "N" ] || [ $console == "n" ]
 	then
   	clear
   	echo "#### Okay, starting iond in silent mode. ####"
 	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
-  	sudo iond &
+  	sudo xiond &>/dev/null
 else
   	clear
  	echo "#### Invalid choice selected, defaulting to silent mode. ####"
 	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
-	sudo iond &
+	sudo xiond &>/dev/null
 fi
