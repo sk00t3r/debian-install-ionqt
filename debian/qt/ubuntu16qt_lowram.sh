@@ -68,7 +68,7 @@ clear
 echo "#### Cloning Repo ####"
 echo " "
 #git clone https://github.com/ionomy/ion-testnet
-git clone https://github.com/ionomy/ion-testnet/tree/qt-fix
+git clone https://github.com/ionomy/ion-testnet/qt-fix
 clear
 echo "#### Changing To The Ion-Core Directory ####"
 echo " "
