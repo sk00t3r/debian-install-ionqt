@@ -89,7 +89,6 @@ then
   #sudo mv ~/.ion/ion.conf ~/.ionomy/
 else
   clear
-  sudo mkdir ~/.ionomy/
   echo "#### Please set a username and password, the password should be long and random ####"
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   echo " "
@@ -97,8 +96,10 @@ else
   echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf
   sudo nano ion.conf
-  sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
-  sudo rm ~/ion-testnet/ion.con
+  sudo mkdir ~/.ionomy
+  #sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
+  #sudo rm ~/ion-testnet/ion.con
+  sudo mv ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
 fi
 echo "#### Starting TestNet Ion-QT Wallet ####"
 echo " "
