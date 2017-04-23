@@ -80,13 +80,13 @@ sudo make
 clear
 echo "#### Chevking for existing iond install ####"
 echo " "
-if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/testnet/ion.conf)" ]
+if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" ]
 then
   clear
   echo "#### Backing up original ion wallet.dat & ion.conf ####"
   echo " "
   sudo cp -p -f -r ~/.ionomy/testnet/wallet.dat ~/.ionomy/testnet/wallet.dat.backup
-  sudo cp -p -f -r ~/.ionomy/testnet/ion.conf ~/.ionomy/testnet/ion.conf.backup
+  sudo cp -p -f -r ~/.ionomy/testnet/ion.conf ~/.ionomy/ion.conf.backup
 #elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
 #  then
 #  clear
@@ -97,6 +97,7 @@ then
 #  sudo mv ~/.ion/wallet.dat ~/.ionomy/
 #  sudo mv ~/.ion/ion.conf ~/.ionomy/
 else
+  sudo mkdir ~/.ionomy/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
@@ -105,7 +106,6 @@ else
   echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf
   sudo nano ion.conf
-  sudo mkdir ~/.ionomy/
   sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
   #sudo mv ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
   sudo rm ~/ion-testnet/ion.conf
@@ -113,4 +113,4 @@ fi
 clear
 echo "#### Starting Ion-QT Wallet ####"
 echo " "
-sudo ./ionx-qt -testnet &
+sudo ./ionx-qt
