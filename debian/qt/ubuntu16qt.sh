@@ -93,9 +93,10 @@ else
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
-  Echo " "
+  echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf
   sudo nano ion.conf
+  sudo mkdir ~/.ionomy
   sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
   sudo rm ~/ion-testnet/ion.con
 fi
