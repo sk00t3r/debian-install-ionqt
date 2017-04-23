@@ -12,7 +12,7 @@ mem_bytes = os.sysconf('SC_PAGE_SIZE') * os.sysconf('SC_PHYS_PAGES')
 mem = mem_bytes/(1024.**3)
 
 def qt():
-        if version == "14.04" and mem >= 4:
+        if version == "14.04" and mem >= 3:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu14qt.sh", "ubuntu14qt.sh")
                 os.chmod('ubuntu14qt.sh', 0755)
                 subprocess.call("./ubuntu14qt.sh", shell=True)
@@ -22,7 +22,7 @@ def qt():
                 os.chmod('ubuntu14qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu14qt_lowram.sh", shell=True)
         
-        elif version == "16.04" and mem >= 4:
+        elif version == "16.04" and mem >= 3:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
                 subprocess.call("./ubuntu16qt.sh", shell=True)
@@ -32,7 +32,7 @@ def qt():
                 os.chmod('ubuntu16qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu16qt_lowram.sh", shell=True)
                                 
-        elif version == "16.10" and mem >= 4:
+        elif version == "16.10" and mem >= 3:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
                 subprocess.call("./ubuntu16qt.sh", shell=True)
@@ -42,7 +42,7 @@ def qt():
                 os.chmod('ubuntu16qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu16qt_lowram.sh", shell=True)
         
-        elif version == "17.04" and mem >= 4:
+        elif version == "17.04" and mem >= 3:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu17qt.sh", "ubuntu17qt.sh")
                 os.chmod('ubuntu17qt.sh', 0755)
                 subprocess.call("./ubuntu17qt.sh", shell=True)
@@ -52,7 +52,7 @@ def qt():
                 os.chmod('ubuntu17qt_lowram.sh', 0755)
                 subprocess.call("./ubuntu17qt_lowram.sh", shell=True)        
                                 
-        elif version == "18.1" and mem >= 4:
+        elif version == "18.1" and mem >= 3:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/debian/qt/ubuntu16qt.sh", "ubuntu16qt.sh")
                 os.chmod('ubuntu16qt.sh', 0755)
                 subprocess.call("./ubuntu16qt.sh", shell=True)
