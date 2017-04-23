@@ -76,30 +76,31 @@ then
   clear
   echo "#### Backing up original ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
+  sudo cp -p -f -r ~/.ionomy/testnet/wallet.dat ~/.ionomy/testnet/wallet.dat.backup
   sudo cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
   #sudo mv ~/.ionomy/wallet.dat ~/.ionomy/
   #sudo mv ~/.ionomy/ion.conf ~/.ionomy/
-elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
-  then
-  clear
-  echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
-  echo " "
-  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-  sudo mv ~/.ion/wallet.dat ~/.ionomy/
-  sudo mv ~/.ion/ion.conf ~/.ionomy/
+#elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
+#  then
+#  clear
+#  echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
+#  echo " "
+#  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+#  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+#  sudo mv ~/.ion/wallet.dat ~/.ionomy/
+#  sudo mv ~/.ion/ion.conf ~/.ionomy/
 else
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
-  Echo " "
+  echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf
   sudo nano ion.conf
-  #sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
-  sudo mv ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
+  sudo mkdir ~/.ionomy/
+  sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
+  sudo rm ~/.ionomy/ion.conf
 fi
 echo "#### Starting Ion-QT Wallet ####"
 echo " "
