@@ -103,4 +103,4 @@ else
 fi
 echo "#### Starting Ion-QT Wallet ####"
 echo " "
-sudo ./xion-qt -testnet &
+sudo ./ionx-qt -testnet &
