@@ -80,7 +80,7 @@ sudo make
 clear
 echo "#### Chevking for existing iond install ####"
 echo " "
-if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" ]
+if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/testnet/ion.conf)" ]
 then
   clear
   echo "#### Backing up original ion wallet.dat & ion.conf ####"
@@ -102,7 +102,7 @@ else
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
-  Echo " "
+  echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf
   sudo nano ion.conf
   sudo mkdir ~/.ionomy/
