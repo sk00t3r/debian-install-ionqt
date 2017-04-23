@@ -78,8 +78,6 @@ then
   echo " "
   sudo cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
   sudo cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
-  #sudo mv ~/.ionomy/wallet.dat ~/.ionomy/
-  #sudo mv ~/.ionomy/ion.conf ~/.ionomy/
 elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   then
   clear
@@ -95,9 +93,11 @@ else
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
-  Echo " "
+  echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/master/ion.conf
   sudo nano ion.conf
+  sudo mkdir ~/.ionomy
+  sudo mv ~/ion/ion.conf ~/.ionomy/ion.conf
 fi
 echo "#### Starting Ion-QT Wallet ####"
 echo " "
