@@ -94,8 +94,10 @@ else
   echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf
   sudo nano ion.conf
-  sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
-  sudo rm ~/ion-testnet/ion.con
+  sudo mkdir ~/.ionomy
+  #sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
+  #sudo rm ~/ion-testnet/ion.con
+  sudo mv ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
 fi
 clear
 echo "#### Starting Ion-QT Wallet ####"
