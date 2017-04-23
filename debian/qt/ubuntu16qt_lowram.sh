@@ -105,6 +105,7 @@ else
   Echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf
   sudo nano ion.conf
+  sudo mkdir ~/.ionomy/
   sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
   #sudo mv ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
   sudo rm ~/ion-testnet/ion.conf
