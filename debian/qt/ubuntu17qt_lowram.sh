@@ -103,7 +103,7 @@ else
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
   Echo " "
-  sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/ion.conf
+  sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf
   sudo nano ion.conf
   #sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
   sudo mv ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
