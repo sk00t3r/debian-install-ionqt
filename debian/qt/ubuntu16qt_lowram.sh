@@ -112,4 +112,4 @@ fi
 clear
 echo "#### Starting Ion-QT Wallet ####"
 echo " "
-sudo ./ionx-qt -testnet &>/dev/null
+sudo ./ionx-qt -testnet &
