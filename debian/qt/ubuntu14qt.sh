@@ -86,7 +86,6 @@ then
 #  sudo mv ~/.ion/ion.conf ~/.ionomy/
 else
   clear
-  sudo mkdir ~/.ionomy/
   echo "#### Please set a username and password, the password should be long and random ####"
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   echo " "
