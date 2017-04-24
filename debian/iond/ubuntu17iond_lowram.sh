@@ -110,9 +110,10 @@ else
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
-  Echo " "
+  echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/master/ion.conf -O ion.conf
   sudo nano ion.conf
+  sudo mv ~/ion/ion.conf ~/.ionomy/ion.conf
 fi
 clear
 echo "#### Changing to /usr/local/bin ####"
