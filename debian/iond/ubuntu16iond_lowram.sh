@@ -113,7 +113,6 @@ else
   echo " "
   sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/master/ion.conf -O ion.conf
   sudo nano ion.conf
-  sudo mv ~/ion/ion.conf ~/.ionomy/ion.conf
 fi
 clear
 echo "#### Changing to /user/local/bin ####"
