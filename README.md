@@ -28,7 +28,7 @@ chmod 755 installtestnet.py
 
 Copy the ion.conf to the correct directory, (cd ~/.ionomy/) and edit the file to create a username and password.
 
-# Raspberry Pi TestNet Install:
+# Raspberry Pi Rebase Install:
 
 Minimum 8GB SD card is needed.
 
