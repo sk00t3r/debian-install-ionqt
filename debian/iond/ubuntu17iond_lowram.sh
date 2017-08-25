@@ -4,7 +4,7 @@ echo "#### Installing Sudo ####"
 echo " "
 apt-get install sudo -y
 clear
-sudo "#### Stopping iond ####"
+echo "#### Stopping iond ####"
 echo " "
 sudo iond stop
 echo "### Removing old ION"
