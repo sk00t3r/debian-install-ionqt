@@ -81,7 +81,7 @@ if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/tes
   echo " "
   cd ion
   ./autogen.sh
-  ./configre
+  ./configure
   make
   make install
 elif [ -n "$(ls -A ~/.ion-testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
