@@ -4,18 +4,21 @@ echo "#### Installing Sudo ####"
 echo " "
 apt-get install sudo -y
 clear
-sudo "#### Stopping iond ####"
+echo "#### Stopping iond ####"
 echo " "
 sudo iond stop
 echo "### Removing old ION"
 echo " "
-sudo rm -rf /usr/bin/iond
-sudo rm -rf /usr/local/bin/iond
-sudo rm -rf /root/ion
+rm -rf /usr/bin/iond
+rm -rf /usr/local/bin/iond
+rm -rf /root/ion
 clear
 echo "#### Change to home directory ####"
 echo " "
 cd ~/
+clear
+echo "#### Adding Bicoin PPA ####"
+add-apt-repository ppa:bitcoin/bitcoin
 clear
 echo "#### Updating Ubuntu/Debian ####"
 echo " "
@@ -25,12 +28,12 @@ sudo apt-get dist-upgrade -y
 sudo apt-get update -y
 clear
 echo "#### Creating Swap ####"
-sudo fallocate -l 4G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo swapon -s
-sudo echo "/swapfile none swap sw 0 0" >> /etc/fstab
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+echo "/swapfile none swap sw 0 0" >> /etc/fstab
 clear
 echo "#### Installing Dependencies ####"
 echo " "
@@ -42,7 +45,7 @@ apt-get install miniupnpc -y
 apt-get install libevent-dev -y
 apt-get install libgmp-dev -y
 apt-get install libboost-all-dev -y
-apt-get install libdb5.3-dev -y
+apt-get install libdb4.8-dev -y
 apt-get install python-software-properties -y 
 apt-get install git -y 
 apt-get install build-essential -y
@@ -52,7 +55,7 @@ apt-get install autoconf -y
 apt-get install pkg-config -y
 apt-get install libssl-dev -y
 apt-get install libcrypto++-dev -y
-apt-get install libdb5.3++-dev -y
+apt-get install libdb4.8++-dev -y
 apt-get install zip -y
 clear
 echo "#### Downloading IOND Core ####"
@@ -61,7 +64,7 @@ git clone https://github.com/ionomy/ion
 clear
 echo "#### Creating ION folder ####"
 echo " "
-mkdir ~/.ionomy/
+mkdir ~/.ioncoin/
 clear
 echo "#### Checking for an existing testnet iond install ####"
 echo " "
@@ -70,11 +73,13 @@ if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/tes
   clear
   echo "#### Backing up original ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ionomy/testnet/wallet.dat ~/.ionomy/testnet/wallet.dat.backup
-  sudo cp -p -f -r ~/.ionomy/testnet/ion.conf ~/.ionomy/testnet/ion.conf.backup
+  cp -p -f -r ~/.ionomy/testnet/wallet.dat ~/.ionomy/testnet/wallet.dat.backup
+  cp -p -f -r ~/.ionomy/testnet/ion.conf ~/.ionomy/testnet/ion.conf.backup
+  mv ~/.ionomy/wallet.dat ~/.ioncoin/
+  mv ~/.ionomy/ion.conf ~/.ioncoin/
   echo "#### Installing IOND Core ####"
   echo " "
-  cd ion-testnet/src
+  cd ion
   ./autogen.sh
   ./configre
   make
@@ -84,13 +89,13 @@ elif [ -n "$(ls -A ~/.ion-testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.con
   clear
   echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-  sudo mv ~/.ion/wallet.dat ~/.ionomy/
-  sudo mv ~/.ion/ion.conf ~/.ionomy/
+  cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+  cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+  mv ~/.ion/wallet.dat ~/.ioncoin/
+  mv ~/.ion/ion.conf ~/.ioncoin/
   echo "#### Installing IOND Core ####"
   echo " "
-  cd ion-testnet/src
+  cd ion
   ./autogen.sh
   ./configure
   make
@@ -99,22 +104,20 @@ else
   clear
   echo "#### No Existing Wallet Found, Installing TestNet IOND Core ####"
   echo " "
-  cd ion-testnet/src
-  sudo make -f makefile.unix
-  #sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
-  #sudo chmod 755 ~/ion-testnet/src/iond
-  sudo chmod 755 ~/ion-testnet/src/xiond
-  #sudo mv ~/ion-testnet/src/iond /usr/local/bin
-  sudo mv ~/ion-testnet/src/xiond /usr/local/bin
-  cd ~/.ionomy/
+  cd ion
+  ./autogen.sh
+  ./configure
+  make
+  make instal
+  cd ~/.ioncoin/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
   echo " "
-  sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf -O ion.conf
-  sudo nano ion.conf
+  wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf -O ion.conf
+  nano ion.conf
 fi
 clear
 echo "#### Changing to /usr/local/bin ####"
@@ -130,16 +133,16 @@ if [ $console == "Y" ] || [ $console == "y" ]
 	echo "#### Open a new teminal session and type" "sudo pkill -9 xiond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
-  	sudo xiond --printtoconsole &>/dev/null
+  	iond --printtoconsole &>/dev/null
 elif [ $console == "N" ] || [ $console == "n" ]
 	then
   	clear
   	echo "#### Okay, starting test net xiond in silent mode. ####"
 	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
-  	sudo xiond &>/dev/null
+  	iond &>/dev/null
 else
   	clear
  	echo "#### Invalid choice selected, defaulting to silent mode. ####"
 	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
-	sudo xiond &>/dev/null
+	iond &>/dev/null
 fi
