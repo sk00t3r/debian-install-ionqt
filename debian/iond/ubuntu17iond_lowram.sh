@@ -108,7 +108,7 @@ else
   ./autogen.sh
   ./configure
   make
-  make instal
+  make install
   cd ~/.ioncoin/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
