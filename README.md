@@ -7,8 +7,10 @@ My code is completely open, but piping to python/bash can be dangerous.  For a s
 You may have to install some dependencies. To install run the following:
 
 apt-get install curl -y
-apt-get install
-apt-get install
+
+apt-get install python-minimal -y
+
+apt-get install python-tk -y
 
 python <(curl "https://gist.githubusercontent.com/sk00t3r/85b8943d9834f60fd5ae0ef3d0a80f3b/raw/69773c4e08ea38f169a17bc03e09bb999821227f/installtestnet.py" -s -N)
 
