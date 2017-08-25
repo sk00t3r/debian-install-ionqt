@@ -30,38 +30,38 @@ sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo swapon -s
-sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
+sudo echo "/swapfile none swap sw 0 0" >> /etc/fstab
 clear
 echo "#### Installing Dependencies ####"
 echo " "
-sudo apt-get install software-properties-common -y 
-sudo apt-get install automake -y 
-sudo apt-get install libevent-dev -y
-sudo apt-get install libminiupnpc-dev -y
-sudo apt-get install miniupnpc -y
-sudo apt-get install libevent-dev -y
-sudo apt-get install libgmp-dev -y
-sudo apt-get install libboost-all-dev -y
-sudo apt-get install libdb5.3-dev -y
-sudo apt-get install python-software-properties -y 
-sudo apt-get install git -y 
-sudo apt-get install build-essential -y
-sudo apt-get install libtool -y 
-sudo apt-get install autotools-dev -y
-sudo apt-get install autoconf -y
-sudo apt-get install pkg-config -y
-sudo apt-get install libssl-dev -y
-sudo apt-get install libcrypto++-dev -y
-sudo apt-get install libdb5.3++-dev -y
-sudo apt-get install zip -y
+apt-get install software-properties-common -y 
+apt-get install automake -y 
+apt-get install libevent-dev -y
+apt-get install libminiupnpc-dev -y
+apt-get install miniupnpc -y
+apt-get install libevent-dev -y
+apt-get install libgmp-dev -y
+apt-get install libboost-all-dev -y
+apt-get install libdb5.3-dev -y
+apt-get install python-software-properties -y 
+apt-get install git -y 
+apt-get install build-essential -y
+apt-get install libtool -y 
+apt-get install autotools-dev -y
+apt-get install autoconf -y
+apt-get install pkg-config -y
+apt-get install libssl-dev -y
+apt-get install libcrypto++-dev -y
+apt-get install libdb5.3++-dev -y
+apt-get install zip -y
 clear
 echo "#### Downloading IOND Core ####"
 echo " "
-git clone https://github.com/ionomy/ion-testnet
+git clone https://github.com/ionomy/ion
 clear
 echo "#### Creating ION folder ####"
 echo " "
-sudo mkdir ~/.ionomy/
+mkdir ~/.ionomy/
 clear
 echo "#### Checking for an existing testnet iond install ####"
 echo " "
@@ -75,12 +75,10 @@ if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/tes
   echo "#### Installing IOND Core ####"
   echo " "
   cd ion-testnet/src
-  sudo make -f makefile.unix
-  #sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
-  #sudo chmod 755 ~/ion-testnet/src/iond
-  sudo chmod 755 ~/ion-testnet/src/xiond
-  #sudo mv ~/ion-testnet/src/iond /usr/local/bin
-  sudo mv ~/ion-testnet/src/xiond /usr/local/bin
+  ./autogen.sh
+  ./configre
+  make
+  make install
 elif [ -n "$(ls -A ~/.ion-testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   then
   clear
@@ -93,12 +91,10 @@ elif [ -n "$(ls -A ~/.ion-testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.con
   echo "#### Installing IOND Core ####"
   echo " "
   cd ion-testnet/src
-  sudo make -f makefile.unix
-  #sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
-  #sudo chmod 755 ~/ion-testnet/src/iond
-  sudo chmod 755 ~/ion-testnet/src/xiond
-  #sudo mv ~/ion-testnet/src/iond /usr/local/bin
-  sudo mv ~/ion-testnet/src/xiond /usr/local/bin
+  ./autogen.sh
+  ./configure
+  make
+  make install
 else
   clear
   echo "#### No Existing Wallet Found, Installing TestNet IOND Core ####"
