@@ -68,15 +68,16 @@ mkdir ~/.ioncoin/
 clear
 echo "#### Checking for an existing testnet iond install ####"
 echo " "
-if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/testnet/ion.conf)" ]
+if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" ]
   then
   clear
   echo "#### Backing up original ion wallet.dat & ion.conf ####"
   echo " "
-  cp -p -f -r ~/.ionomy/testnet/wallet.dat ~/.ionomy/testnet/wallet.dat.backup
-  cp -p -f -r ~/.ionomy/testnet/ion.conf ~/.ionomy/testnet/ion.conf.backup
+  cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
+  cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
   mv ~/.ionomy/wallet.dat ~/.ioncoin/
-  mv ~/.ionomy/ion.conf ~/.ioncoin/
+  mv ~/.ionomy/ion.conf ~/.ionomy/ioncoin.conf
+  mv ~/.ionomy/ioncoin.conf ~/.ioncoin/
   echo "#### Installing IOND Core ####"
   echo " "
   cd ion
@@ -84,7 +85,7 @@ if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/tes
   ./configure
   make
   make install
-elif [ -n "$(ls -A ~/.ion-testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
+elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   then
   clear
   echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
@@ -92,7 +93,8 @@ elif [ -n "$(ls -A ~/.ion-testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.con
   cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
   cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
   mv ~/.ion/wallet.dat ~/.ioncoin/
-  mv ~/.ion/ion.conf ~/.ioncoin/
+  mv ~/.ion/ion.conf ~/.ion/ioncoin.conf
+  mv ~/.ion/ioncoin.conf ~/.ioncoin/
   echo "#### Installing IOND Core ####"
   echo " "
   cd ion
@@ -116,14 +118,14 @@ else
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
   echo " "
-  wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf -O ion.conf
-  nano ion.conf
+  wget https://raw.githubusercontent.com/sk00t3r/linux-ion/rebase/ioncoin.conf -O ioncoin.conf
+  nano ioncoin.conf
 fi
 clear
 echo "#### Changing to /usr/local/bin ####"
 echo " "
 cd /usr/local/bin
-echo "#### Would you like to start testnet xiond in print to console mode? Generally you want No. [Y/n] ####"
+echo "#### Would you like to start iond in print to console mode? Generally you want No. [Y/n] ####"
 echo " "
 read console
 if [ $console == "Y" ] || [ $console == "y" ]
