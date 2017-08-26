@@ -60,8 +60,9 @@ apt-get install zip -y
 clear
 echo "#### Downloading IOND Core ####"
 echo " "
-git clone https://github.com/ionomy/ion
+sudo git clone https://github.com/ionomy/ion
 clear
+pause
 echo "#### Creating ION folder ####"
 echo " "
 mkdir ~/.ioncoin/
