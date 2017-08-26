@@ -60,7 +60,7 @@ sudo apt-get install zip -y
 clear
 echo "#### Downloading IOND Core ####"
 echo " "
-git clone https://github.com/ionomy/ion
+git clone https://github.com/ionomy/cevap/ion
 clear
 echo "#### Creating ION folder ####"
 echo " "
