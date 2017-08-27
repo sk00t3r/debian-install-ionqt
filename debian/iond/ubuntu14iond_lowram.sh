@@ -17,16 +17,16 @@ echo "#### Change to home directory ####"
 echo " "
 cd ~/
 clear
-echo "#### Adding Bitcoin PPA ####"
-sudo apt-get update -y
-sudo add-apt-repository ppa:bitcoin/bitcoin
-#sudo add-apt-repository ppa:ionomy/ioncoin
-clear
 echo "#### Updating Ubuntu/Debian ####"
 echo " "
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
+sudo apt-get update -y
+clear
+echo "#### Adding Bitcoin PPA ####"
+sudo add-apt-repository ppa:bitcoin/bitcoin
+#sudo add-apt-repository ppa:ionomy/ioncoin
 sudo apt-get update -y
 clear
 echo "#### Creating Swap ####"
