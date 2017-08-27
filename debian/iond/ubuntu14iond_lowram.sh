@@ -17,16 +17,16 @@ echo "#### Change to home directory ####"
 echo " "
 cd ~/
 clear
+echo "#### Adding Bitcoin PPA ####"
+sudo apt-get install software-properties-common -y
+sudo add-apt-repository ppa:bitcoin/bitcoin
+#sudo add-apt-repository ppa:ionomy/ioncoin
+clear
 echo "#### Updating Ubuntu/Debian ####"
 echo " "
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
-sudo apt-get update -y
-clear
-echo "#### Adding Bitcoin PPA ####"
-sudo add-apt-repository ppa:bitcoin/bitcoin
-#sudo add-apt-repository ppa:ionomy/ioncoin
 sudo apt-get update -y
 clear
 echo "#### Creating Swap ####"
@@ -38,8 +38,7 @@ swapon -s
 echo "/swapfile none swap sw 0 0" >> /etc/fstab
 clear
 echo "#### Installing Dependencies ####"
-echo " "
-sudo apt-get install software-properties-common -y 
+echo " " 
 sudo apt-get install automake -y 
 sudo apt-get install libevent-dev -y
 sudo apt-get install libminiupnpc-dev -y
