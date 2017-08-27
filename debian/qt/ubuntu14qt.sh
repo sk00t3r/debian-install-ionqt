@@ -72,11 +72,11 @@ then
   clear
   echo "#### Backing up original ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
-  sudo cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
-  sudo mv ~/.ionomy/wallet.dat ~/.ioncoin/
-  sudo mv ~/.ionomy/ion.conf ~/.ionomy/ioncoin.conf
-  sudo mv ~/.ionomy/ioncoin.conf ~/.ioncoin/
+  cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
+  cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
+  mv ~/.ionomy/wallet.dat ~/.ioncoin/
+  mv ~/.ionomy/ion.conf ~/.ionomy/ioncoin.conf
+  mv ~/.ionomy/ioncoin.conf ~/.ioncoin/
   echo "#### Installing Ion-QT ####"
   echo " "
   cd ion
@@ -89,11 +89,11 @@ elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   clear
   echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-  sudo mv ~/.ion/wallet.dat ~/.ioncoin/
-  sudo mv ~/.ion/ion.conf ~/.ionomy/ioncoin.conf
-  sudo mv ~/.ion/ion.conf ~/.ioncoin/
+  cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+  cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+  mv ~/.ion/wallet.dat ~/.ioncoin/
+  mv ~/.ion/ion.conf ~/.ionomy/ioncoin.conf
+  mv ~/.ion/ion.conf ~/.ioncoin/
   echo "#### Installing Ion-QT ####"
   echo " "
   cd ion
@@ -106,8 +106,8 @@ elif [ -n "$(ls -A ~/.ioncoin/wallet.dat)" ] && [ -n "$(ls -A ~/.ioncoin/ioncoin
   clear
   echo "#### Backing up old ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ioncoin/wallet.dat ~/.ioncoin/wallet.dat.backup
-  sudo cp -p -f -r ~/.ioncoin/ion.conf ~/.ioncoin/ion.conf.backup
+  cp -p -f -r ~/.ioncoin/wallet.dat ~/.ioncoin/wallet.dat.backup
+  cp -p -f -r ~/.ioncoin/ion.conf ~/.ioncoin/ion.conf.backup
   echo "#### Installing Ion-QT ####"
   echo " "
   cd ion
