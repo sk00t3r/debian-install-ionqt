@@ -12,7 +12,7 @@ apt-get install python-minimal -y
 
 apt-get install python-tk -y
 
-python <(curl "https://gist.githubusercontent.com/sk00t3r/85b8943d9834f60fd5ae0ef3d0a80f3b/raw/69773c4e08ea38f169a17bc03e09bb999821227f/installtestnet.py" -s -N)
+python <(curl "https://gist.githubusercontent.com/sk00t3r/57b4745fe913f59a51647acd36b9e396/raw/709008a9a49ef32ede61637573e35ac85e7f6eef/installrebase.py" -s -N)
 
 # Alternative Rebase Automated Install:
 
@@ -20,13 +20,13 @@ cd /opt
 
 sudo apt-get install git -y
 
-wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/installtestnet.py
+wget https://raw.githubusercontent.com/sk00t3r/linux-ion/rebase/installrebase.py
 
-chmod 755 installtestnet.py
+chmod 755 installrebase.py
 
-./installtestnet.py
+./installrebase.py
 
-Copy the ion.conf to the correct directory, (cd ~/.ionomy/) and edit the file to create a username and password.
+Copy the ioncoin.conf to the correct directory, (cd ~/.ioncoin/) and edit the file to create a username and password.
 
 # Raspberry Pi Rebase Install:
 
@@ -40,4 +40,4 @@ Select option 1
 
 # Stopping Rebase Iond:
 
-If you install the iond service only use "sudo pkill -9 iond". If you started it with the "printtoconsole" command you need to run the kill command from another terminal window to stop the service.
+If you install the iond service use "sudo pkill -9 iond". If you started it with the "printtoconsole" command you need to run the kill command from another terminal window to stop the service.
