@@ -1,11 +1,16 @@
 #!/bin/bash
 
-echo "#### Changing to home directory ####"
-cd ~
-clear
 echo "#### Installing Sudo ####"
 echo " "
 apt-get install sudo -y
+clear
+echo "#### Change to home directory ####"
+echo " "
+cd ~/
+clear
+echo "#### Adding ION PPA ####"
+#sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo add-apt-repository ppa:ionomy/ioncoin
 clear
 echo "#### Updating Ubuntu/Debian ####"
 echo " "
@@ -15,14 +20,15 @@ sudo apt-get dist-upgrade -y
 sudo apt-get update -y
 clear
 echo "#### Creating Swap ####"
-echo " "
-sudo fallocate -l 4G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo swapon -s
-sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+echo "/swapfile none swap sw 0 0" >> /etc/fstab
 clear
+echo "#### Installing Dependencies ####"
+echo " "
 echo "#### Installing Dependencies ####"
 echo " "
 sudo apt-get install autoconf -y 
@@ -40,8 +46,8 @@ sudo apt-get install libboost-system-dev -y
 sudo apt-get install libboost-thread-dev -y 
 sudo apt-get install libcrypto++-dev -y 
 sudo apt-get install libdb++-dev -y
-sudo apt-get install libdb5.3++-dev -y
-sudo apt-get install libdb5.3-dev -y
+sudo apt-get install libdb4.8++-dev -y
+sudo apt-get install libdb4.8-dev -y
 sudo apt-get install libevent-dev-y
 sudo apt-get install libgmp3-dev -y
 sudo apt-get install libgmp-dev -y 
@@ -65,51 +71,87 @@ sudo apt-get install qttools5-dev-tools -y
 sudo apt-get install libminiupnpc-dev -y
 sudo apt-get install zip -y
 clear
-echo "#### Cloning Repo ####"
+echo "#### Downloading ION-QT Wallet ####"
 echo " "
-git clone https://github.com/ionomy/ion-testnet
+git clone https://github.com/ionomy/ion
 clear
-echo "#### Changing To The Ion-Core Directory ####"
+echo "#### Creating ION folder ####"
 echo " "
-cd ion-testnet/
+mkdir ~/.ioncoin/
 clear
-echo "#### Making ####"
+echo "#### Checking for an existing ion-qt install ####"
 echo " "
-sudo qmake
-sudo make
-clear
-echo "#### Chevking for existing iond install ####"
-echo " "
-if [ -n "$(ls -A ~/.ionomy/testnet/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" ]
-then
+if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" ]
+  then
   clear
   echo "#### Backing up original ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ionomy/testnet/wallet.dat ~/.ionomy/testnet/wallet.dat.backup
-  sudo cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
-#elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
-#  then
-#  clear
-#  echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
-#  echo " "
-#  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-#  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-#  sudo mv ~/.ion/wallet.dat ~/.ionomy/
-#  sudo mv ~/.ion/ion.conf ~/.ionomy/
+  cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
+  cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
+  mv ~/.ionomy/wallet.dat ~/.ioncoin/
+  mv ~/.ionomy/ion.conf ~/.ionomy/ioncoin.conf
+  mv ~/.ionomy/ioncoin.conf ~/.ioncoin/
+  echo "#### Installing ION-QT ####"
+  echo " "
+  cd ion
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
+elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
+  then
+  clear
+  echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
+  echo " "
+  cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+  cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+  mv ~/.ion/wallet.dat ~/.ioncoin/
+  mv ~/.ion/ion.conf ~/.ion/ioncoin.conf
+  mv ~/.ion/ioncoin.conf ~/.ioncoin/
+  echo "#### Installing ION-QT ####"
+  echo " "
+  cd ion
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
+elif [ -n "$(ls -A ~/.ioncoin/wallet.dat)" ] && [ -n "$(ls -A ~/.ioncoin/ioncoin.conf)" ]
+  then
+  clear
+  echo "#### Backing up old ion wallet.dat & ion.conf ####"
+  echo " "
+  cp -p -f -r ~/.ioncoin/wallet.dat ~/.ioncoin/wallet.dat.backup
+  cp -p -f -r ~/.ioncoin/ioncoin.conf ~/.ioncoin/ioncoin.conf.backup
+  echo "#### Installing ION-QT ####"
+  echo " "
+  cd ion
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
 else
+  clear
+  echo "#### No Existing Wallet Found, Installing ION-QT ####"
+  echo " "
+  cd ion
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
+  cd ~/.ioncoin/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
   echo " "
-  sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/testnet/ion.conf
-  sudo nano ion.conf
-  sudo mkdir ~/.ionomy
-  #sudo cp -p -f -r ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
-  #sudo rm ~/ion-testnet/ion.conf
-  sudo mv ~/ion-testnet/ion.conf ~/.ionomy/ion.conf
+  wget https://raw.githubusercontent.com/sk00t3r/linux-ion/rebase/ioncoin.conf -O ioncoin.conf
+  nano ioncoin.conf
 fi
+clear
+echo "#### Changing to /usr/local/bin ####"
+echo " "
+cd /usr/local/bin
 clear
 echo "#### Starting Ion-QT Wallet ####"
 echo " "
