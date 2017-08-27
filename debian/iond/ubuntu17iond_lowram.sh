@@ -85,7 +85,7 @@ if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" 
   ./autogen.sh
   ./configure
   make
-  make install
+  sudo make install
 elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   then
   clear
@@ -102,7 +102,21 @@ elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   ./autogen.sh
   ./configure
   make
-  make install
+  sudo make install
+elif [ -n "$(ls -A ~/.ioncoin/wallet.dat)" ] && [ -n "$(ls -A ~/.ioncoin/ioncoin.conf)" ]
+  then
+  clear
+  echo "#### Backing up old ion wallet.dat & ion.conf ####"
+  echo " "
+  cp -p -f -r ~/.ioncoin/wallet.dat ~/.ioncoin/wallet.dat.backup
+  cp -p -f -r ~/.ioncoin/ioncoin.conf ~/.ioncoin/ioncoin.conf.backup
+  echo "#### Installing IOND Core ####"
+  echo " "
+  cd ion
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
 else
   clear
   echo "#### No Existing Wallet Found, Installing TestNet IOND Core ####"
@@ -111,7 +125,7 @@ else
   ./autogen.sh
   ./configure
   make
-  make install
+  sudo make install
   cd ~/.ioncoin/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
@@ -133,7 +147,7 @@ if [ $console == "Y" ] || [ $console == "y" ]
   	then
   	clear
   	echo "#### Okay, starting in print to console mode. ####" 
-	echo "#### Open a new teminal session and type" "sudo pkill -9 xiond" "to quit iond ####"
+	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
   	iond --printtoconsole &>/dev/null
@@ -141,11 +155,11 @@ elif [ $console == "N" ] || [ $console == "n" ]
 	then
   	clear
   	echo "#### Okay, starting test net xiond in silent mode. ####"
-	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
+	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
   	iond &>/dev/null
 else
   	clear
  	echo "#### Invalid choice selected, defaulting to silent mode. ####"
-	echo "#### Type" "sudo pkill -9 xiond" "to quit iond ####"
+	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
 	iond &>/dev/null
 fi
