@@ -133,26 +133,7 @@ clear
 echo "#### Changing to /usr/local/bin ####"
 echo " "
 cd /usr/local/bin
-echo "#### Would you like to start iond in print to console mode? Generally you want No. [Y/n] ####"
+echo "#### Starting ion.d service ####"
 echo " "
-read console
-if [ $console == "Y" ] || [ $console == "y" ]
-  	then
-  	clear
-  	echo "#### Okay, starting in print to console mode. ####" 
-	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
-  	echo " "
-	read -p "#### Press any key when you are ready to continue ####"
-  	iond --printtoconsole &>/dev/null
-elif [ $console == "N" ] || [ $console == "n" ]
-	then
-  	clear
-  	echo "#### Okay, starting test net xiond in silent mode. ####"
-	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
-  	iond &>/dev/null
-else
-  	clear
- 	echo "#### Invalid choice selected, defaulting to silent mode. ####"
-	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
-	iond &>/dev/null
-fi
+echo "#### Type" "sudo iond stop" "to quit iond ####"
+iond&
