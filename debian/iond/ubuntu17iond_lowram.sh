@@ -18,7 +18,7 @@ echo " "
 cd ~/
 clear
 echo "#### Adding Bicoin PPA ####"
-#sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo add-apt-repository ppa:bitcoin/bitcoin
 sudo add-apt-repository ppa:ionomy/ioncoin
 clear
 echo "#### Updating Ubuntu/Debian ####"
