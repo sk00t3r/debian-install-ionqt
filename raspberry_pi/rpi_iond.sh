@@ -4,18 +4,22 @@ echo "#### Installing Sudo ####"
 echo " "
 apt-get install sudo -y
 clear
-sudo "#### Stopping iond ####"
+echo "#### Stopping iond ####"
 echo " "
 sudo iond stop
 echo "### Removing old ION"
 echo " "
-sudo rm -rf /usr/bin/iond
-sudo rm -rf /usr/local/bin/iond
-sudo rm -rf /root/ion
+rm -rf /usr/bin/iond
+rm -rf /usr/local/bin/iond
+rm -rf /root/ion
 clear
 echo "#### Change to home directory ####"
 echo " "
 cd ~/
+clear
+echo "#### Adding Bitcoin PPA ####"
+sudo add-apt-repository ppa:bitcoin/bitcoin
+#sudo add-apt-repository ppa:ionomy/ioncoin
 clear
 echo "#### Updating Ubuntu/Debian ####"
 echo " "
@@ -25,12 +29,12 @@ sudo apt-get dist-upgrade -y
 sudo apt-get update -y
 clear
 echo "#### Creating Swap ####"
-sudo fallocate -l 2G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo swapon -s
-sudo echo "/swapfile swap sw 0 0" >> /etc/fstab
+fallocate -l 2G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+echo "/swapfile none swap sw 0 0" >> /etc/fstab
 clear
 echo "#### Installing Dependencies ####"
 echo " "
@@ -39,86 +43,105 @@ sudo apt-get install automake -y
 sudo apt-get install libevent-dev -y
 sudo apt-get install libminiupnpc-dev -y
 sudo apt-get install miniupnpc -y
+sudo apt-get install libzmq3-dev -y
 sudo apt-get install libevent-dev -y
 sudo apt-get install libgmp-dev -y
 sudo apt-get install libboost-all-dev -y
-sudo apt-get install libdb5.3-dev -y
+sudo apt-get install libdb4.8-dev -y
 sudo apt-get install python-software-properties -y 
 sudo apt-get install git -y 
 sudo apt-get install build-essential -y
 sudo apt-get install libtool -y 
-sudp apt-get install autotools-dev -y
+sudo apt-get install autotools-dev -y
 sudo apt-get install autoconf -y
 sudo apt-get install pkg-config -y
 sudo apt-get install libssl-dev -y
 sudo apt-get install libcrypto++-dev -y
-sudo apt-get install libdb5.3++-dev -y
+sudo apt-get install libdb4.8++-dev -y
 sudo apt-get install zip -y
 clear
 echo "#### Downloading IOND Core ####"
 echo " "
-git clone https://github.com/ionomy/ion-testnet
+git clone https://github.com/ionomy/ion
 clear
 echo "#### Creating ION folder ####"
 echo " "
-sudo mkdir ~/.ionomy/
+mkdir ~/.ioncoin/
 clear
-echo "#### Checking for existing iond install ####"
+echo "#### Checking for an existing iond install ####"
 echo " "
 if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" ]
   then
   clear
   echo "#### Backing up original ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
-  sudo cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
+  cp -p -f -r ~/.ionomy/wallet.dat ~/.ionomy/wallet.dat.backup
+  cp -p -f -r ~/.ionomy/ion.conf ~/.ionomy/ion.conf.backup
+  mv ~/.ionomy/wallet.dat ~/.ioncoin/
+  mv ~/.ionomy/ion.conf ~/.ionomy/ioncoin.conf
+  mv ~/.ionomy/ioncoin.conf ~/.ioncoin/
   echo "#### Installing IOND Core ####"
   echo " "
-  cd ion-testnet/src
-  sudo make -f makefile.unix
-  sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
-  sudo chmod 755 ~/ion-testnet/src/iond
-  sudo mv ~/ion-testnet/src/iond /usr/local/bin
+  cd ion
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
 elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   then
   clear
   echo "#### Backing up & moving old ion wallet.dat & ion.conf ####"
   echo " "
-  sudo cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
-  sudo cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
-  sudo mv ~/.ion/wallet.dat ~/.ionomy/
-  sudo mv ~/.ion/ion.conf ~/.ionomy/
+  cp -p -f -r ~/.ion/wallet.dat ~/.ion/wallet.dat.backup
+  cp -p -f -r ~/.ion/ion.conf ~/.ion/ion.conf.backup
+  mv ~/.ion/wallet.dat ~/.ioncoin/
+  mv ~/.ion/ion.conf ~/.ion/ioncoin.conf
+  mv ~/.ion/ioncoin.conf ~/.ioncoin/
   echo "#### Installing IOND Core ####"
   echo " "
-  cd ion-testnet/src
-  sudo make -f makefile.unix
-  sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
-  sudo chmod 755 ~/ion-testnet/src/iond
-  sudo mv ~/ion-testnet/src/iond /usr/local/bin
+  cd ion
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
+elif [ -n "$(ls -A ~/.ioncoin/wallet.dat)" ] && [ -n "$(ls -A ~/.ioncoin/ioncoin.conf)" ]
+  then
+  clear
+  echo "#### Backing up old ion wallet.dat & ion.conf ####"
+  echo " "
+  cp -p -f -r ~/.ioncoin/wallet.dat ~/.ioncoin/wallet.dat.backup
+  cp -p -f -r ~/.ioncoin/ioncoin.conf ~/.ioncoin/ioncoin.conf.backup
+  echo "#### Installing IOND Core ####"
+  echo " "
+  cd ion
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
 else
   clear
   echo "#### No Existing Wallet Found, Installing IOND Core ####"
   echo " "
-  cd ion-testnet/src
-  sudo make -f makefile.unix
-  sudo mv ~/ion-testnet/src/xiond ~/ion-testnet/src/iond
-  sudo chmod 755 ~/ion-testnet/src/iond
-  sudo mv ~/ion-testnet/src/iond /usr/local/bin
-  cd ~/.ionomy/
+  cd ion
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
+  cd ~/.ioncoin/
   clear
   echo "#### Please set a username and password, the password should be long and random ####"
   echo "#### Ctrl + X, Y, Enter to save file and exit ####"
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
-  Echo " "
-  sudo wget https://raw.githubusercontent.com/sk00t3r/linux-ion/blob/testnet/ion.conf -O ion.conf
-  sudo nano ion.conf
+  echo " "
+  wget https://raw.githubusercontent.com/sk00t3r/linux-ion/rebase/ioncoin.conf -O ioncoin.conf
+  nano ioncoin.conf
 fi
 clear
-echo "#### Changing to /user/local/bin ####"
+echo "#### Changing to /usr/local/bin ####"
 echo " "
 cd /usr/local/bin
-echo "#### Would you like to start iond in print to console mode? [Y/n] ####"
+echo "#### Would you like to start iond in print to console mode? Generally you want No. [Y/n] ####"
 echo " "
 read console
 if [ $console == "Y" ] || [ $console == "y" ]
@@ -128,18 +151,16 @@ if [ $console == "Y" ] || [ $console == "y" ]
 	echo "#### Open a new teminal session and type" "sudo pkill -9 iond" "to quit iond ####"
   	echo " "
 	read -p "#### Press any key when you are ready to continue ####"
-  	sudo iond --printtoconsole
+  	iond --printtoconsole &>/dev/null
 elif [ $console == "N" ] || [ $console == "n" ]
 	then
   	clear
-  	echo "#### Okay, starting iond in silent mode. ####"
+  	echo "#### Okay, starting test net xiond in silent mode. ####"
 	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
-  	echo " "
-	read -p "#### Press any key when you are ready to continue ####"
-  	sudo iond &
+  	iond &>/dev/null
 else
   	clear
  	echo "#### Invalid choice selected, defaulting to silent mode. ####"
 	echo "#### Type" "sudo pkill -9 iond" "to quit iond ####"
-	sudo iond &
+	iond &>/dev/null
 fi
