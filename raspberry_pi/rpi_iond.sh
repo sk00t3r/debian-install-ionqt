@@ -29,7 +29,7 @@ sudo apt-get dist-upgrade -y
 sudo apt-get update -y
 clear
 echo "#### Creating Swap ####"
-fallocate -l 2G /swapfile
+fallocate -l 4G /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
