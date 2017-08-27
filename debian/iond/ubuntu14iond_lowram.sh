@@ -18,6 +18,7 @@ echo " "
 cd ~/
 clear
 echo "#### Adding Bitcoin PPA ####"
+sudo apt-get update -y
 sudo add-apt-repository ppa:bitcoin/bitcoin
 #sudo add-apt-repository ppa:ionomy/ioncoin
 clear
