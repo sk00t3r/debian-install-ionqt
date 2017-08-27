@@ -43,7 +43,7 @@ sudo apt-get install automake -y
 sudo apt-get install libevent-dev -y
 sudo apt-get install libminiupnpc-dev -y
 sudo apt-get install miniupnpc -y
-sudo apt-get install libzmq3-dev -y
+#sudo apt-get install libzmq3-dev -y
 sudo apt-get install libevent-dev -y
 sudo apt-get install libgmp-dev -y
 sudo apt-get install libboost-all-dev -y
