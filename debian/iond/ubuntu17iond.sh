@@ -17,7 +17,7 @@ echo "#### Change to home directory ####"
 echo " "
 cd ~/
 clear
-echo "#### Adding Bicoin PPA ####"
+echo "#### Adding Bitcoin PPA ####"
 #sudo add-apt-repository ppa:bitcoin/bitcoin
 sudo add-apt-repository ppa:ionomy/ioncoin
 clear
@@ -60,7 +60,7 @@ echo "#### Creating ION folder ####"
 echo " "
 mkdir ~/.ioncoin/
 clear
-echo "#### Checking for an existing testnet iond install ####"
+echo "#### Checking for an existing iond install ####"
 echo " "
 if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" ]
   then
@@ -112,7 +112,7 @@ elif [ -n "$(ls -A ~/.ioncoin/wallet.dat)" ] && [ -n "$(ls -A ~/.ioncoin/ioncoin
   sudo make install
 else
   clear
-  echo "#### No Existing Wallet Found, Installing TestNet IOND Core ####"
+  echo "#### No Existing Wallet Found, Installing IOND Core ####"
   echo " "
   cd ion
   ./autogen.sh
