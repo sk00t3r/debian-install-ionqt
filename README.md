@@ -38,6 +38,18 @@ sudo raspi-config
 
 Select option 1
 
+# Starting Rebase Ion-QT Wallet:
+
+If you need to start the ion-qt wallet.
+
+cd /usr/local/bin
+
+ion-qt&
+
+# Starting Rebase Ion-QT Wallet:
+
+If you need to stop the ion-qt wallet click the "x" or close the wallet.
+
 # Starting Rebase Iond Service:
 
 If your computer restarts or you jsut need to start the iond service.
@@ -48,4 +60,4 @@ iond&
 
 # Stopping Rebase Iond Service:
 
-If you install the iond service use "iond stop".
+If you need to stop the iond service use "iond stop".
