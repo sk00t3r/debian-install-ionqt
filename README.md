@@ -36,7 +36,7 @@ You need to expand your storage by running the following from terminal:
 
 sudo raspi-config
 
-Select option 1
+Select option 7 (Advanced Options) then select option A1 (Expand Filesystem) and reboot.
 
 # Starting Rebase Ion-QT Wallet:
 
