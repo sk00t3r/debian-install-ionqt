@@ -6,11 +6,11 @@ My code is completely open, but piping to python/bash can be dangerous.  For a s
 
 You may have to install some dependencies. To install run the following:
 
-apt-get install curl -y
+sudo apt-get install curl -y
 
-apt-get install python-minimal -y
+sudo apt-get install python-minimal -y
 
-apt-get install python-tk -y
+sudo apt-get install python-tk -y
 
 python <(curl "https://gist.githubusercontent.com/sk00t3r/ca93a8fb2e077770dc75e80df8aa6edf/raw/ce579f5cc283ac8653b3989800923482e09bfd37/install.py" -s -N)
 
@@ -20,11 +20,11 @@ cd /opt
 
 sudo apt-get install git -y
 
-wget https://raw.githubusercontent.com/sk00t3r/linux-ion/rebase/installrebase.py
+wget https://raw.githubusercontent.com/sk00t3r/linux-ion/master/install.py
 
-chmod 755 installrebase.py
+chmod 755 install.py
 
-./installrebase.py
+./install.py
 
 Copy the ioncoin.conf to the correct directory, (cd ~/.ioncoin/) and edit the file to create a username and password.
 
