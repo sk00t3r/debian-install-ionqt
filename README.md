@@ -38,6 +38,6 @@ sudo raspi-config
 
 Select option 1
 
-# Stopping Rebase Iond:
+# Stopping Rebase Iond Service:
 
-If you install the iond service use "sudo pkill -9 iond". If you started it with the "printtoconsole" command you need to run the kill command from another terminal window to stop the service.
+If you install the iond service use "iond stop".
