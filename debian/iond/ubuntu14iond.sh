@@ -130,6 +130,7 @@ else
   echo " "
   wget https://raw.githubusercontent.com/sk00t3r/linux-ion/rebase/ioncoin.conf -O ioncoin.conf
   nano ioncoin.conf
+  mv ioncoin.conf ~/.ioncoin/ioncoin.conf
 fi
 clear
 echo "#### Changing to /usr/local/bin ####"
