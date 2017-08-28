@@ -46,7 +46,7 @@ cd /usr/local/bin
 
 ion-qt&
 
-# Starting Rebase Ion-QT Wallet:
+# Stopping Rebase Ion-QT Wallet:
 
 If you need to stop the ion-qt wallet click the "x" or close the wallet.
 
