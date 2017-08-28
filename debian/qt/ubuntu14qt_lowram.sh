@@ -69,7 +69,7 @@ sudo apt-get install libminiupnpc-dev -y
 sudo apt-get install zip -y
 clear
 echo "#### Downloading ION-QT ####"
-git clone https://github.com/ionomy/ion
+git clone https://github.com/cevap/ion
 clear
 echo "#### Changing To The Ion-QT Directory ####"
 cd ion/
@@ -141,6 +141,7 @@ else
   echo " "
   wget https://raw.githubusercontent.com/sk00t3r/linux-ion/rebase/ioncoin.conf -O ioncoin.conf
   nano ioncoin.conf
+  mv ioncoin.conf ~/.ioncoin/ioncoin.conf
 fi
 clear
 echo "#### Changing to /usr/local/bin ####"
@@ -149,5 +150,3 @@ cd /usr/local/bin
 echo "#### Starting Ion-QT ####"
 echo " "
 ion-qt&
-#echo "#### Starting Ion-QT Wallet ####"
-#sudo ./ionx-qt
