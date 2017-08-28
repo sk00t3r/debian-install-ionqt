@@ -71,7 +71,7 @@ def arm_qt():
                 os.chmod('rpi_qt.sh', 0755)
                 subprocess.call("./rpi_qt.sh", shell=True)
         
-        if version == "9.1":
+        elif version == "9.1":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/raspberry_pi/rpi_qt_91.sh", "rpi_qt_91.sh")
                 os.chmod('rpi_qt_91.sh', 0755)
                 subprocess.call("./rpi_qt_91.sh", shell=True)
@@ -79,7 +79,12 @@ def arm_qt():
                 print("Sorry version not yet supported.")
 
 def arm_iond():
-        if version == "9.1":
+        if version == "8.0":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/raspberry_pi/rpi_iond.sh", "rpi_iond.sh")
+                os.chmod('rpi_iond.sh', 0755)
+                subprocess.call("./rpi_iond.sh", shell=True)
+                
+        elif version == "9.1":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/raspberry_pi/rpi_iond_91.sh", "rpi_iond_91.sh")
                 os.chmod('rpi_iond_91.sh', 0755)
                 subprocess.call("./rpi_iond_91.sh", shell=True)
