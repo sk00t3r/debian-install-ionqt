@@ -41,7 +41,8 @@ echo "/swapfile none swap sw 0 0" >> /etc/fstab
 clear
 echo "#### Installing Dependencies ####"
 echo " "
-sudo apt-get install software-properties-common -y 
+sudo apt-get install software-properties-common -y
+sudo apt-get install g++-arm-linux-gnueabihf
 sudo apt-get install automake -y 
 sudo apt-get install libevent-dev -y
 sudo apt-get install libminiupnpc-dev -y
