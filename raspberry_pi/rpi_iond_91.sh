@@ -91,7 +91,7 @@ if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" 
   make HOST=arm-linux-gnueabihf
   cd ..
   ./autogen.sh
-  ./configure --prefix=`pwd`/depends/arm-linux-gnueabihf --with-incompatible-bdb
+  ./configure --prefix=`pwd`/depends/arm-linux-gnueabihf
   make HOST=arm-linux-gnueabihf
   sudo make install
 elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
@@ -112,7 +112,7 @@ elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   make HOST=arm-linux-gnueabihf
   cd ..
   ./autogen.sh
-  ./configure --prefix=`pwd`/depends/arm-linux-gnueabihf --with-incompatible-bdb
+  ./configure --prefix=`pwd`/depends/arm-linux-gnueabihf
   make HOST=arm-linux-gnueabihf
   sudo make install
 elif [ -n "$(ls -A ~/.ioncoin/wallet.dat)" ] && [ -n "$(ls -A ~/.ioncoin/ioncoin.conf)" ]
@@ -130,7 +130,7 @@ elif [ -n "$(ls -A ~/.ioncoin/wallet.dat)" ] && [ -n "$(ls -A ~/.ioncoin/ioncoin
   make HOST=arm-linux-gnueabihf
   cd ..
   ./autogen.sh
-  ./configure --prefix=`pwd`/depends/arm-linux-gnueabihf --with-incompatible-bdb
+  ./configure --prefix=`pwd`/depends/arm-linux-gnueabihf
   make HOST=arm-linux-gnueabihf
   sudo make install
 else
@@ -143,7 +143,7 @@ else
   make HOST=arm-linux-gnueabihf
   cd ..
   ./autogen.sh
-  ./configure --prefix=`pwd`/depends/arm-linux-gnueabihf --with-incompatible-bdb
+  ./configure --prefix=`pwd`/depends/arm-linux-gnueabihf
   make HOST=arm-linux-gnueabihf
   sudo make install
   cd ~/.ioncoin/
