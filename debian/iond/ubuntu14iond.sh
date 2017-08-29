@@ -21,7 +21,6 @@ echo "#### Adding Bitcoin PPA ####"
 sudo apt-get install software-properties-common -y
 clear
 sudo add-apt-repository ppa:bitcoin/bitcoin
-#sudo add-apt-repository ppa:ionomy/ioncoin
 clear
 echo "#### Updating Ubuntu/Debian ####"
 echo " "
@@ -34,24 +33,24 @@ echo "#### Installing Dependencies ####"
 echo " "
 sudo apt-get install software-properties-common -y 
 sudo apt-get install automake -y 
-sudo apt-get install libevent-dev -y
-sudo apt-get install libminiupnpc-dev -y
-sudo apt-get install miniupnpc -y
-sudo apt-get install libzmq3-dev -y
-sudo apt-get install libevent-dev -y
-sudo apt-get install libgmp-dev -y
-sudo apt-get install libboost-all-dev -y
-sudo apt-get install libdb4.8-dev -y
+#sudo apt-get install libevent-dev -y
+#sudo apt-get install libminiupnpc-dev -y
+#sudo apt-get install miniupnpc -y
+#sudo apt-get install libzmq3-dev -y
+#sudo apt-get install libevent-dev -y
+#sudo apt-get install libgmp-dev -y
+#sudo apt-get install libboost-all-dev -y
+#sudo apt-get install libdb4.8-dev -y
 sudo apt-get install python-software-properties -y 
 sudo apt-get install git -y 
 sudo apt-get install build-essential -y
-sudo apt-get install libtool -y 
+#sudo apt-get install libtool -y 
 sudo apt-get install autotools-dev -y
 sudo apt-get install autoconf -y
 sudo apt-get install pkg-config -y
-sudo apt-get install libssl-dev -y
-sudo apt-get install libcrypto++-dev -y
-sudo apt-get install libdb4.8++-dev -y
+#sudo apt-get install libssl-dev -y
+#sudo apt-get install libcrypto++-dev -y
+#sudo apt-get install libdb4.8++-dev -y
 sudo apt-get install zip -y
 clear
 echo "#### Downloading IOND Core ####"
@@ -77,6 +76,10 @@ if [ -n "$(ls -A ~/.ionomy/wallet.dat)" ] && [ -n "$(ls -A ~/.ionomy/ion.conf)" 
   echo "#### Installing IOND Core ####"
   echo " "
   cd ion
+  make clean
+  cd depends
+  make
+  cd ..
   ./autogen.sh
   ./configure
   make
@@ -94,6 +97,10 @@ elif [ -n "$(ls -A ~/.ion/wallet.dat)" ] && [ -n "$(ls -A ~/.ion/ion.conf)" ]
   echo "#### Installing IOND Core ####"
   echo " "
   cd ion
+  make clean
+  cd depends
+  make
+  cd ..
   ./autogen.sh
   ./configure
   make
@@ -108,6 +115,10 @@ elif [ -n "$(ls -A ~/.ioncoin/wallet.dat)" ] && [ -n "$(ls -A ~/.ioncoin/ioncoin
   echo "#### Installing IOND Core ####"
   echo " "
   cd ion
+  make clean
+  cd depends
+  make
+  cd ..
   ./autogen.sh
   ./configure
   make
@@ -117,6 +128,10 @@ else
   echo "#### No Existing Wallet Found, Installing IOND Core ####"
   echo " "
   cd ion
+  make clean
+  cd depends
+  make
+  cd ..
   ./autogen.sh
   ./configure
   make
@@ -130,7 +145,7 @@ else
   echo " "
   wget https://raw.githubusercontent.com/sk00t3r/linux-ion/rebase/ioncoin.conf -O ioncoin.conf
   nano ioncoin.conf
-  mv ioncoin.conf ~/.ioncoin/ioncoin.conf
+  mv ioncoin.conf ~/.ioncoin/
 fi
 clear
 echo "#### Changing to /usr/local/bin ####"
