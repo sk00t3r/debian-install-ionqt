@@ -18,6 +18,7 @@ echo " "
 cd ~/
 clear
 echo "#### Adding Bitcoin PPA ####"
+sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:bitcoin/bitcoin
 #sudo add-apt-repository ppa:ionomy/ioncoin
 clear
@@ -62,7 +63,7 @@ sudo apt-get install zip -y
 clear
 echo "#### Downloading IOND Core ####"
 echo " "
-git clone https://github.com/ionomy/ion
+git clone https://github.com/cevap/ion
 clear
 echo "#### Creating ION folder ####"
 echo " "
