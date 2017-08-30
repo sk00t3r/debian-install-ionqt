@@ -42,26 +42,13 @@ clear
 echo "#### Installing Dependencies ####"
 echo " "
 sudo apt-get install software-properties-common -y
-sudo apt-get install g++-arm-linux-gnueabihf
 sudo apt-get install automake -y 
-sudo apt-get install libevent-dev -y
-sudo apt-get install libminiupnpc-dev -y
-sudo apt-get install miniupnpc -y
-sudo apt-get install libzmq3-dev -y
-sudo apt-get install libevent-dev -y
-sudo apt-get install libgmp-dev -y
-sudo apt-get install libboost-all-dev -y
-sudo apt-get install libdb5.3-dev -y
 #sudo apt-get install python-software-properties -y 
 sudo apt-get install git -y 
 sudo apt-get install build-essential -y
-sudo apt-get install libtool -y 
 sudo apt-get install autotools-dev -y
 sudo apt-get install autoconf -y
 sudo apt-get install pkg-config -y
-sudo apt-get install libssl-dev -y
-sudo apt-get install libcrypto++-dev -y
-sudo apt-get install libdb5.3++-dev -y
 sudo apt-get install zip -y
 clear
 echo "#### Downloading IOND Core ####"
