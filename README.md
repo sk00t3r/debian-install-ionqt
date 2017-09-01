@@ -12,7 +12,7 @@ sudo apt-get install python-minimal -y
 
 sudo apt-get install python-tk -y
 
-python <(curl "https://gist.githubusercontent.com/sk00t3r/ca93a8fb2e077770dc75e80df8aa6edf/raw/127adc626cf4f783114e4408d9c0a189003f6aaf/install.py" -s -N)
+python <(curl "https://gist.githubusercontent.com/sk00t3r/ca93a8fb2e077770dc75e80df8aa6edf/raw/aaa67e8b9f58433ec9f5919cbb60f113d318d8dd/install.py" -s -N)
 
 # Alternative Rebase Automated Install:
 
