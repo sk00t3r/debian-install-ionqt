@@ -34,7 +34,8 @@ sudo apt-get install autogen -y
 sudo apt-get install automake -y
 sudo apt-get install autotools-dev -y 
 sudo apt-get install bsdmainutils -y
-sudo apt-get install build-essential -y 
+sudo apt-get install build-essential -y
+sudo apt-get install curl -y
 sudo apt-get install git -y
 #sudo apt-get install libzmq3-dev -y
 #sudo apt-get install libboost-all-dev -y 
