@@ -48,7 +48,7 @@ ion-qt&
 
 # Stopping Rebase Ion-QT Wallet:
 
-If you need to stop the ion-qt wallet click the "x" or close the wallet.
+If you need to stop the ion-qt wallet just close the wallet (File/Exit or click the "X").
 
 # Starting Rebase Iond Service:
 
