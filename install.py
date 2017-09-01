@@ -72,9 +72,10 @@ def arm_qt():
                 subprocess.call("./rpi_qt.sh", shell=True)
         
         elif version == "9.1":
-                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/raspberry_pi/rpi_qt_91.sh", "rpi_qt_91.sh")
-                os.chmod('rpi_qt_91.sh', 0755)
-                subprocess.call("./rpi_qt_91.sh", shell=True)
+                #urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/linux-ion/master/raspberry_pi/rpi_qt_91.sh", "rpi_qt_91.sh")
+                #os.chmod('rpi_qt_91.sh', 0755)
+                #subprocess.call("./rpi_qt_91.sh", shell=True)
+                print("Sorry version not yet supported.")
         else:
                 print("Sorry version not yet supported.")
 
